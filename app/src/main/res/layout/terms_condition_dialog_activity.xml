@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:id="@+id/header"
+            android:background="#ff5d27"
+            android:layout_height="@dimen/_52sdp">
+            <RelativeLayout
+                android:layout_width="@dimen/_45sdp"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:layout_alignParentRight="true"
+                android:id="@+id/back_button"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/cross"
+                    />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/text_pading_10"
+                android:drawablePadding="@dimen/text_pading_4"
+                android:gravity="center"
+                android:text="Terms and Conditions"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="normal" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        android:visibility="visible"
+        android:layout_weight="0.90"
+        >
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/termsConditionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_condition_title"
+            android:textColor="@color/orange_color"
+            android:textSize="@dimen/_18sdp"
+            android:visibility="gone"
+            android:layout_margin="@dimen/_5sdp"
+            />
+
+
+
+
+
+        <EditText
+            android:visibility="visible"
+            android:layout_width="match_parent"
+            android:id="@+id/termText"
+            android:layout_height="match_parent"
+            android:hint=""
+            android:background="@drawable/input_text_background"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal"
+            android:text=""
+            android:gravity="start"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:editable="false"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_margin="@dimen/_5sdp"/>
+        //
+        <!--android:layout_height="@dimen/searchList_dialog"-->
+
+    </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@+id/termText"
+            android:layout_weight="0.10"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:id="@+id/btnlayout"
+            >
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/btntenant"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/common_btn_bg"
+                android:text="Tenant"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:paddingRight="@dimen/text_pading_10"
+                android:paddingLeft="@dimen/text_pading_10"
+                android:layout_margin="@dimen/text_margin_5"
+                />
+
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/btnparent"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/common_btn_bg"
+                android:text="Parent"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_14sdp"
+                android:textColor="@color/white"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/termText"
+                android:paddingRight="@dimen/text_pading_10"
+                android:paddingLeft="@dimen/text_pading_10"
+                android:layout_margin="@dimen/text_margin_5"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    //
+
+</RelativeLayout>

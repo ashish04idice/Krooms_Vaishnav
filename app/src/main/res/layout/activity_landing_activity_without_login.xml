@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.krooms.hostel.rental.property.app.activity.LandingActivityWithoutLogin">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/image_height"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/k_rooms"
+        android:layout_marginTop="@dimen/text_margin_20"
+        />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/informationPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/signInBtn"
+        android:layout_below="@+id/appLogo"
+        android:layout_margin="@dimen/text_margin_10"
+        >
+
+    </android.support.v4.view.ViewPager>
+
+    <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+        android:id="@+id/signInBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/common_btn_bg"
+        android:text="Sign in"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/signUpBtn"
+        android:layout_marginLeft="@dimen/text_margin_45"
+        android:layout_marginRight="@dimen/text_margin_45"
+        android:textColor="@color/white"
+        />
+    <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+        android:id="@+id/signUpBtn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:background="@drawable/common_btn_bg"
+        android:text="Sign Up"
+        android:layout_marginTop="@dimen/text_margin_5"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/text_margin_5"
+        android:layout_marginLeft="@dimen/text_margin_45"
+        android:layout_marginRight="@dimen/text_margin_45"
+        android:textColor="@color/white"
+        android:layout_above="@+id/skipBtn"
+        />
+
+    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+        android:id="@+id/skipBtn"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:text="Skip >>"
+        android:textColor="@color/orange_color"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/text_margin_5"
+        android:gravity="center"
+        android:textSize="@dimen/text_size_18"
+        />
+
+</RelativeLayout>

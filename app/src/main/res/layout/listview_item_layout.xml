@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="101"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_weight="0.8"
+        android:id="@+id/txtroomno"
+        android:background="@drawable/cell_shape_item"
+        />
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Url"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:visibility="gone"
+        android:gravity="center"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingLeft="@dimen/_2sdp"
+        android:id="@+id/txtimg"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape_item"/>
+    <!--<View
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:background="#111111"
+        />-->
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="Ayush Sharma"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:id="@+id/txtname"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_weight="1.3"
+        android:background="@drawable/cell_shape_item"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="12:44"
+        android:gravity="center"
+        android:id="@+id/txtintime"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape_item"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="2:00"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/txtouttime"
+        android:visibility="gone"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape_item"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:id="@+id/txtcount"
+        android:layout_weight="0.9"
+        android:background="@drawable/cell_shape_item"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text="home"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/txtreason"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape_item"
+        />
+        </LinearLayout>
+
+</LinearLayout>

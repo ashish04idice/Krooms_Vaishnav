@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_52sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/orange_color">
+
+        <RelativeLayout
+            android:id="@+id/pback_button"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="@dimen/_3sdp">
+
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Add Child"
+            android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ownerlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:layout_marginRight="@dimen/_6sdp"
+        android:background="@drawable/border"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <EditText
+            android:id="@+id/psearchmobile"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:hint="Please Enter Mobile No"
+            android:inputType="number"
+            android:maxLength="10"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/pserchbtn"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:layout_weight="0.5"
+            android:background="@color/orange_color"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:background="@drawable/search" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/_7sdp">
+
+        <ListView
+            android:id="@+id/plistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/otpverificationlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnaddchild"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appLogo"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/text_pading_4">
+
+                <ImageView
+                    android:id="@+id/imageview_otp"
+                    android:layout_width="@dimen/input_text_field_height"
+                    android:layout_height="@dimen/input_text_field_height"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/text_pading_2"
+                    android:src="@drawable/otp" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_text_field_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_toRightOf="@+id/imageview_otp"
+                    android:background="@color/transparent"
+                    android:hint="@string/str_enter_one_password_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/text_pading_8"
+                    android:paddingRight="@dimen/text_pading_2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edittext_otp"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:layout_marginRight="@dimen/text_margin_20"
+                android:layout_marginTop="@dimen/text_margin_40"
+                android:background="@drawable/common_btn_bg"
+                android:text="@string/str_submit_btn_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnaddchild"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/custom_btn_focus"
+            android:onClick="showResult"
+            android:text="Add"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+</LinearLayout>
+

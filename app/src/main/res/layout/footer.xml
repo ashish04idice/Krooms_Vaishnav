@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/adminCreatedAdImage_footer"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="@dimen/image_height"
+        android:layout_margin="@dimen/text_margin_10"
+        />
+
+    <ViewFlipper
+        android:id="@+id/simpleViewFlipperfooter"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_160sdp">
+
+    </ViewFlipper>
+
+
+    <RelativeLayout
+        android:id="@+id/youtubesupportfragment_layout_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin_10"
+        >
+
+        <fragment
+            android:id="@+id/youtubesupportfragment_footer"
+            android:name="com.google.android.youtube.player.YouTubePlayerSupportFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

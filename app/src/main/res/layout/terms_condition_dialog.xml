@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_margin_5"
+        android:background="@color/white"
+        >
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/termsConditionTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/terms_and_condition_title"
+            android:textColor="@color/orange_color"
+            android:textSize="@dimen/text_size_20"
+            android:layout_margin="@dimen/text_margin_5"
+
+            />
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/termText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/searchList_dialog"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:layout_below="@+id/termsConditionTitle"
+            android:layout_margin="@dimen/text_margin_5"
+            android:text="@string/terms_and_condition_msg"
+            android:textColor="@color/black"
+            android:background="@drawable/input_text_background"
+            android:padding="@dimen/text_margin_10"
+            />
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/agreeBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/edittext_height_small"
+            android:background="@drawable/common_btn_bg"
+            android:text="I Agree"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/termText"
+            android:paddingRight="@dimen/text_pading_10"
+            android:paddingLeft="@dimen/text_pading_10"
+            android:layout_margin="@dimen/text_margin_5"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

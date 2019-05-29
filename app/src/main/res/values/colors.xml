@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#00FF4081</color>
+
+    <color name="white">#ffffff</color>
+    <color name="white_dark">#d2b48c</color>
+    <color name="black">#000000</color>
+    <color name="blue">#0000ff</color>
+    <color name="red">#ff0000</color>
+    <color name="green">#00ff00</color>
+    <color name="grey">#808080</color>
+    <color name="lightgray">#80808080</color>
+    <color name="grey_lite">#dedede</color>
+    <color name="yellow">#ffff00</color>
+    <color name="violet">#EE82EE</color>
+    <color name="orange">#ffa500</color>
+    <color name="olive">#808000</color>
+    <color name="navy">#000080</color>
+    <color name="transparent">#00000000</color>
+    <color name="orange_color">#ff5d27</color>
+    <color name="green_color">#008000</color>
+
+    <color name="blue_color_doxdepo">#104e8b</color>
+    <color name="blue_color_doxdepo_strok">#4d00b9e5</color>
+    <color name="blue_color_doxdepo1">#104e8b</color>
+    <color name="top_panal_color">#2f4159</color>
+
+    <color name="transparent_black_90">#90000000</color>
+    <color name="transparent_black_75">#BF000000</color>
+    <color name="transparent_black_70">#66fff000</color>
+
+    <color name="theme_orange_color">#ff5d27</color>
+    <color name="theme_orange_color_dark">#ff3f55</color>
+
+    <color name="black_with_opacity">#252525</color>
+    <color name="black_with_opacity_new">#99252525</color>
+
+    <color name="grid_color_orange">#80ff5d27</color>
+
+
+    <color name="unselected_color">#80808080</color>
+    <color name="selected_color">#808080</color>
+
+    <color name="red_color">#ff0000</color>
+
+
+    <color name="blue_color">#00BFFF</color>
+    <color name="vacant_gray">#696969</color>
+    <color name="class_orage">#FFD700</color>
+
+</resources>

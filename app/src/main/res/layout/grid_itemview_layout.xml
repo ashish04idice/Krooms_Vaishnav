@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_1sdp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    >
+
+
+    <!--android:background="@color/grid_color_orange"-->
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#FFFFFF"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/layproperty"
+        android:padding="@dimen/_8sdp"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Room-101"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_gravity="center"
+        android:id="@+id/txtroomno"
+        />
+
+  <!--  <ImageView
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:id="@+id/tenat_pic"
+        android:padding="@dimen/_3sdp"
+        android:layout_gravity="center"
+        android:src="@drawable/profile_pic"
+        />-->
+
+
+       <!-- <com.androidhub4you.crop.RoundedImageView
+            android:id="@+id/tenat_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:src="@drawable/pic1" />
+-->
+
+       <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_below="@+id/tenat_pic"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/att_icon"
+            android:id="@+id/tenat_pic"
+           app:civ_border_overlay="false"
+           app:civ_border_color="@color/orange_color"
+           app:civ_border_width="3dp"
+            />
+
+
+
+       <!-- <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/tenat_pic"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:background="@drawable/pic1"
+            app:border_color="@color/white"
+            app:border_width="3dp" />
+
+-->
+
+
+        <!-- <LinearLayout
+             android:layout_width="@dimen/_120sdp"
+             android:layout_height="@dimen/_120sdp"
+             android:background="@drawable/plain_circle_red"
+             android:id="@+id/layout_circle"
+             android:layout_gravity="center"
+             android:gravity="center"
+             >
+
+             <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/tenat_pic"
+                 android:layout_width="@dimen/_80sdp"
+                 android:layout_height="@dimen/_80sdp"
+                 android:layout_centerHorizontal="true"
+                 android:padding="@dimen/_10sdp"
+                 android:background="@drawable/pic1"
+                 app:border_color="@color/white"
+                 app:border_width="3dp" />
+
+
+        &lt;!&ndash; <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:id="@+id/tenat_pic"
+             android:layout_width="120dp"
+             android:layout_height="120dp"
+             android:layout_centerHorizontal="true"
+             android:background="@drawable/pic1"
+             app:border_color="@color/white"
+             app:border_width="3dp" />
+             &ndash;&gt;
+
+             </LinearLayout>-->
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/_8sdp"
+                android:layout_height="@dimen/_8sdp"
+                android:src="@drawable/red_icon"
+                android:id="@+id/img_active"
+                android:visibility="gone"
+                android:paddingTop="@dimen/_2sdp"
+                />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tenant_name"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:id="@+id/txtname"
+        />
+</LinearLayout>
+
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

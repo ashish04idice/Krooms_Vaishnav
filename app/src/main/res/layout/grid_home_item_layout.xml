@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/orange_color"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="@dimen/_160sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_1sdp"
+        android:background="@color/grid_color_orange"
+        android:id="@+id/layproperty"
+        android:layout_height="match_parent">
+        <ImageView
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:id="@+id/grid_image"
+           />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:id="@+id/grid_text"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:textSize="@dimen/_16sdp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+</LinearLayout>
+    </LinearLayout>
+<!--
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:id="@+id/grid_image"
+        android:scaleType="fitXY"
+        android:layout_gravity="center"
+        android:src="@drawable/grid_icon1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/grid_text"
+        android:text="use"
+        android:textSize="@dimen/_18sdp"
+        android:textColor="#111111"
+        />
+
+
+
+</LinearLayout>
+
+-->
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp">
+
+
+    <ImageView
+        android:id="@+id/grid_image"
+        android:src="@drawable/grid_icon1"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/grid_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello gggggg"
+        android:textSize="@dimen/_18sdp"
+        android:layout_alignBottom="@+id/grid_image"
+        android:layout_alignRight="@+id/grid_image"
+        android:layout_alignEnd="@+id/grid_image"
+        android:layout_marginRight="48dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="40dp">
+    </TextView>
+</RelativeLayout>
+-->
+

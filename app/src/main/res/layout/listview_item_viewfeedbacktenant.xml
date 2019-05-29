@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="@dimen/_10sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/propertyDescription_layout_id"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="#FFFFFF"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="@dimen/_50sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="center"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="@dimen/_40sdp"
+                    android:id="@+id/fitemtnamefirstletter"
+                    android:textColor="#ffffff"
+                    android:text="A"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_15sdp"
+                    android:gravity="center"
+                    android:background="@drawable/gray_cirlce_large_img"
+                    android:layout_height="@dimen/_40sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_5sdp"
+                >
+
+                <LinearLayout
+                    android:layout_width="@dimen/_160sdp"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/fitemownername"
+                        android:text="User"
+                        android:singleLine="true"
+                        android:gravity="center_vertical"
+                        android:textColor="#111111"
+                        android:textSize="@dimen/_16sdp"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/fitemcomplaintheadowner"
+                        android:text="Water"
+                        android:visibility="visible"
+                        android:layout_toRightOf="@+id/fitemownername"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/fitemcomplaintowner"
+                        android:textColor="#808080"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:text="Comaplaint data js not send all the end"
+                        android:paddingRight="@dimen/_20sdp"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/fitemdateowner"
+                        android:textColor="#808080"
+                        android:text="6-2-2017"
+                        android:textSize="@dimen/_15sdp"
+                        ></TextView>
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/fitemtimeowner"
+                        android:textColor="#808080"
+                        android:visibility="gone"
+                        android:layout_below="@+id/fitemdateowner"
+                        android:layout_alignParentRight="true"
+                        android:text="9:20pm"
+                        android:textSize="@dimen/_15sdp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/_18sdp"
+                        android:id="@+id/fitemroleowner"
+                        android:textColor="#808080"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_alignParentRight="true"
+                        android:text="receiver"
+                        android:textSize="@dimen/_14sdp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:id="@+id/fitemtotal"
+                        android:layout_gravity="right"
+                        android:paddingRight="@dimen/_5sdp"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_3sdp"
+                        android:layout_marginTop="@dimen/_3sdp"
+                        android:paddingBottom="@dimen/_3sdp"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_18sdp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:background="@drawable/whitecircle"
+                        android:textColor="#FFFFFF"
+                        android:textSize="@dimen/_8sdp"
+                        ></TextView>
+<!--
+                    android:background="@drawable/circlechat"
+-->
+
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

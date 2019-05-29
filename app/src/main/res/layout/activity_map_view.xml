@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.krooms.hostel.rental.property.app.activity.MapViewActivity">
+
+    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+        android:id="@+id/tapOnMapMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please Tap on map to get location"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/text_margin_10"
+        android:textColor="@color/orange_color"
+        android:textSize="@dimen/text_size_18"
+        />
+
+    <fragment
+        android:id="@+id/mapView"
+        class="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tapOnMapMsg"
+        />
+
+</RelativeLayout>

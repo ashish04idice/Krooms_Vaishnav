@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/tools"
+    android:padding="@dimen/_15sdp"
+    android:background="@color/transparent_black_75"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/statepopup_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/orange_color">
+
+        <TextView
+            android:id="@+id/statepopup_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Your Payment is Succesful "
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:id="@+id/country_cross_layout"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="@dimen/_23sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:background="@drawable/cross"
+
+                />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_width="@dimen/_300sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="visible"
+                card_view:cardCornerRadius="@dimen/_2sdp"
+                app:elevation="@dimen/_10sdp"
+                card_view:contentPaddingLeft="@dimen/_10sdp"
+                card_view:contentPaddingRight="@dimen/_10sdp"
+               >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:background="@drawable/my_drawable"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_50sdp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="@dimen/_110sdp"
+                            android:layout_height="match_parent"
+                            android:gravity="center|right">
+
+                            <TextView
+                                android:layout_width="@dimen/_40sdp"
+                                android:layout_height="@dimen/_40sdp"
+                                android:background="@drawable/k_rooms" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:gravity="center_vertical"
+                            android:text="PaySlip"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_20sdp" />
+
+                    </LinearLayout>
+
+                    <TableLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="@drawable/my_drawable">
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="@dimen/_40sdp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:background="@drawable/k_rooms" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:gravity="center"
+                                android:text="PaymentSlip"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/_20sdp" />
+
+                        </TableRow>
+
+
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp">
+
+                            <TextView
+                                android:id="@+id/propertyname"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="krooms "
+                                android:textSize="@dimen/_12sdp" />
+
+                        </TableRow>
+
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_20sdp">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Date"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/userdate"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Tenant Id"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/usertid"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Name"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/username"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="riya"
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Property Id"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/userpropertyid"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Room No."
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/userroomno"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Total Amount"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/paymenttotal"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Paid"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/userpaid"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Due Amount"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/userdueamount"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="1000"
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Payment Mode"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/usermode"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+
+                        <TableRow
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:text="Comment"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/chequeno"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:background="@drawable/my_drawable"
+                                android:gravity="center"
+                                android:paddingBottom="@dimen/_10sdp"
+                                android:paddingTop="@dimen/_10sdp"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textSize="@dimen/_10sdp" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_2sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/download_data_button"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_btn_focus"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Download Slip"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_14sdp" />
+
+                        <Button
+                            android:id="@+id/nobutton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/_40sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@drawable/custom_btn_focus"
+                            android:text="Ok"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_15sdp" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

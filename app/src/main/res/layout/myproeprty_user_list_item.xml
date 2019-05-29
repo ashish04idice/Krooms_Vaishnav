@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/text_margin_5"
+        android:src="@drawable/user_xl" />
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/layimageview"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/text_margin_5"
+        >
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/imageview_itm_user"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:src="@drawable/user_deflaut"
+            android:layout_centerInParent="true"
+            app:civ_border_overlay="true"
+            app:civ_circle_background_color="@color/white"
+            app:civ_border_color="@color/orange_color"
+            app:civ_border_width="1dp" />
+
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/text_margin_2"
+        android:layout_toRightOf="@+id/layimageview"
+        android:orientation="vertical">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/property_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rahul mahajan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/property_user_book_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Room no:- 202"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/property_user_book_room_bad"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Rent Amount: 2200"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="/m"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/property_user_book_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Booked Date:-22/02/2016"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/text_size_13" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/property_user_book_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="Paid Amount: 1000"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/property_user_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="vijay nagar indore"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_below="@+id/layout_top"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_toRightOf="@+id/layimageview"
+        android:id="@+id/laysms"
+        android:orientation="horizontal">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Attendance Sms"
+            android:textColor="@color/black"
+            android:visibility="invisible"
+            android:textSize="@dimen/text_size_13" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attendance Sms"
+            android:id="@+id/smscheckBox"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_14"
+            android:visibility="gone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:scrollbars="none"
+            android:layout_below="@+id/textView1"
+            />
+    </LinearLayout>
+
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layimageview"
+        android:layout_marginTop="@dimen/text_margin_2"
+        android:background="@color/grey" />
+</RelativeLayout>

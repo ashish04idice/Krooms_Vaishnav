@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="#ff5d27"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Tenant Attendence "
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:id="@+id/tabheader"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_45sdp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:id="@+id/daily_layout"
+            android:background="@color/grey"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Daily"
+                android:textSize="@dimen/_15sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:id="@+id/manual_layout"
+            android:background="@color/lightgray"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Manual"
+                android:textSize="@dimen/_15sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@color/lightgray"
+            android:orientation="horizontal"
+            android:layout_height="match_parent"
+            android:id="@+id/food_layout"
+            android:visibility="visible"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:text="Food"
+                android:textSize="@dimen/_16sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <com.stacktips.view.CustomCalendarView
+        android:id="@+id/calendar_view"
+        android:layout_below="@+id/tabheader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:calendarBackgroundColor="#FFFFFF"
+        app:calendarTitleTextColor="@color/black"
+        app:currentDayOfMonthColor="@color/black"
+        app:dayOfMonthTextColor="@color/black"
+        app:dayOfWeekTextColor="@color/black"
+        app:disabledDayBackgroundColor="#FFFFFF"
+        app:disabledDayTextColor="@color/grey"
+        app:selectedDayBackgroundColor="#ff5d27"
+        app:titleLayoutBackgroundColor="@color/white"
+        app:weekLayoutBackgroundColor="@color/white"/>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_marginBottom="@dimen/_90sdp"
+    android:layout_alignParentBottom="true"
+    android:layout_height="@dimen/_40sdp">
+
+    <Button
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="match_parent"
+        android:text="Ok"
+        android:id="@+id/ok"
+        android:textColor="#FFFFFF"
+        android:background="#ff5d27"/>
+
+</LinearLayout>
+
+</RelativeLayout>

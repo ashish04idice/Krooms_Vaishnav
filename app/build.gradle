@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 27
+    lintOptions {
+        abortOnError true
+    }
+    useLibrary 'org.apache.http.legacy'
+
+    defaultConfig {
+        applicationId "com.krooms.hostel.rental.property.app"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 17
+        versionName "3.1"
+        multiDexEnabled true
+    }
+    buildTypes {
+       debug {
+            debuggable true
+           /* minifyEnabled true
+            shrinkResources true*/
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+      /*  release {
+            debuggable true
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }*/
+    }
+
+    android {
+        dexOptions {
+            javaMaxHeapSize = "4g"
+        }
+
+        lintOptions {
+            checkReleaseBuilds false
+            // Or, if you prefer, you can continue to check for errors in release builds,
+            // but continue the build even when errors are found:
+            abortOnError false
+        }
+    }
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE.txt'
+    }
+}
+
+dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation files('libs/picasso-2.5.2.jar')
+    implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation 'cz.msebera.android:httpclient:4.3.6'
+    implementation 'com.google.android.gms:play-services-maps:11.0.4'
+    implementation 'com.google.maps.android:android-maps-utils:0.4.2'
+    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
+    implementation 'com.android.support:multidex:1.0.0'
+    /*implementation 'com.google.android.gms:play-services-ads:11.0.4'
+    implementation 'com.google.android.gms:play-services-identity:11.0.4'
+    implementation 'com.google.android.gms:play-services-gcm:11.0.4'*/
+    implementation 'com.mcxiaoke.volley:library:1.0.+'
+    implementation 'com.google.android.gms:play-services-location:11.0.4'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'io.reactivex:rxjava:1.1.0'
+    implementation 'io.reactivex:rxjava-async-util:0.21.0'
+    implementation 'io.reactivex:rxandroid:1.1.0'
+    implementation 'com.jakewharton.rxbinding:rxbinding:0.3.0'
+    implementation 'com.trello:rxlifecycle:0.4.0'
+    implementation 'com.trello:rxlifecycle-components:0.4.0'
+    implementation 'com.itextpdf:itextpdf:5.5.10'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    implementation files('libs/FDxSDKProAndroid.jar')
+    implementation files('libs/libauthenticateplugin.jar')
+    implementation project(':library')
+    implementation files('libs/activation.jar')
+    implementation files('libs/additionnal.jar')
+    implementation files('libs/mail.jar')
+    implementation files('libs/jxl-2.6.jar')
+    implementation 'com.android.support:multidex:1.0.1'
+    implementation files('libs/ACPL_FM220_SDK_DUAL.jar')
+    implementation 'com.google.firebase:firebase-messaging:11.0.4'
+    implementation files('libs/httpmime-4.3.jar')
+    implementation files('libs/httpcore-4.3-beta1.jar')
+    implementation 'com.theartofdev.edmodo:android-image-cropper:2.7.+'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+}
+
+apply plugin: 'com.google.gms.google-services'

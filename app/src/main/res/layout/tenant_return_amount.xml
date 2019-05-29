@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/student_loader"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_30sdp"
+        android:background="@drawable/red_loader"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Payment Option" android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/text_margin_25">
+
+            <ImageView
+                android:id="@+id/paymentSmileIcon"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:visibility="visible"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pay_face" />
+
+            <LinearLayout
+                android:id="@+id/total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paymentSmileIcon"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Tenant Amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/totalAmount_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+
+
+
+
+            <LinearLayout
+                android:id="@+id/total_amount_payble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_amount"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Return Amount"
+                    android:id="@+id/txtfinalamouttxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/totalpaybleamount_output_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+
+
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn_focus"
+                android:text="Return"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/total_amount_payble"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

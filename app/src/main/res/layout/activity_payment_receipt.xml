@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.krooms.hostel.rental.property.app.activity.PaymentReceiptActivity">
+
+    <ImageView
+        android:id="@+id/appLogo"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/custom_button_box_width"
+        android:src="@drawable/k_logo" />
+
+    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+        android:id="@+id/thankYouMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appLogo"
+        android:layout_marginTop="@dimen/text_margin_10"
+        android:gravity="center"
+        android:paddingLeft="@dimen/text_pading_5"
+        android:paddingRight="@dimen/text_pading_5"
+        android:text="Thank you for booking property using krooms."
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20" />
+
+    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+        android:id="@+id/bookingDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/thankYouMessage"
+        android:layout_margin="@dimen/text_margin_10"
+        android:text="Booking Detail :"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_20"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/bookingDetail"
+        android:layout_margin="@dimen/text_margin_10"
+        android:orientation="vertical">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/propertyName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Property Name :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/propertyAdress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Address :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/roomNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Room No. :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/propertyType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Property Type :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/tenantName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Primary Tenant :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/contactNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact No. :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/emailId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email Id :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/transactionNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Transaction No. :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/orderId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Order Id :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="@dimen/text_margin_10"
+            />
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/totalAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Total Amount :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:layout_marginTop="@dimen/text_margin_10"
+            android:gravity="right"
+            />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/paidAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Paid Amount :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:gravity="right"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="@dimen/text_margin_10"
+            />
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/remainingAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Remaining Amount :"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_16"
+            android:layout_marginTop="@dimen/text_margin_10"
+            android:gravity="right"
+            />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/black"
+            android:layout_marginTop="@dimen/text_margin_10"
+            />
+
+    </LinearLayout>
+</RelativeLayout>

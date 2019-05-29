@@ -1,0 +1,175 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/text_margin_10"
+        android:background="@color/orange_color">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_margin_10"
+            android:drawableLeft="@drawable/ic_back_arrow"
+            android:drawablePadding="@dimen/text_pading_2"
+            android:gravity="center_vertical"
+            android:text="@string/str_title_signup"
+            android:visibility="gone"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollview_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout_header">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin_15"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/appLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image_height"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/k_rooms" />
+
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/textview_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/str_verification_sms"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/textview_hint_otp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="@string/hint_otp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="normal" />
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appLogo"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:padding="@dimen/text_pading_4">
+
+                <ImageView
+                    android:id="@+id/imageview_otp"
+                    android:layout_width="@dimen/input_text_field_height"
+                    android:layout_height="@dimen/input_text_field_height"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/text_pading_2"
+                    android:src="@drawable/otp" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_otp"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/input_text_field_height"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_toRightOf="@+id/imageview_otp"
+                    android:background="@color/transparent"
+                    android:hint="@string/str_enter_one_password_hint"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:paddingLeft="@dimen/text_pading_8"
+                    android:paddingRight="@dimen/text_pading_2"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/edittext_otp"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/btn_submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:layout_marginRight="@dimen/text_margin_20"
+                android:layout_marginTop="@dimen/text_margin_40"
+                android:background="@drawable/common_btn_bg"
+                android:text="@string/str_submit_btn_text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/button_resend_otp"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginTop="@dimen/text_margin_20"
+                android:background="@drawable/orange_border"
+                android:paddingLeft="@dimen/text_pading_10"
+                android:paddingRight="@dimen/text_pading_10"
+                android:text="@string/str_resend_code"
+                android:textColor="@drawable/orange_text_selector"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/linearlayout_loading"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:progressDrawable="@color/orange_color" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                    android:id="@+id/textview_Pleasewait"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Please wait..."
+                    android:textColor="@color/orange_color"
+                    android:textSize="@dimen/text_size_16"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

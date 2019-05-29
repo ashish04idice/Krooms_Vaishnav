@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black_90">
+
+    <RelativeLayout
+        android:id="@+id/createCustomCategoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_pading_15"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/createCutomCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/orange_color">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/alertTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/text_margin_10"
+                android:text="Sort By"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+        </RelativeLayout>
+
+        <RadioGroup
+            android:id="@+id/selectSortOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createCutomCategoryTitle"
+            android:layout_margin="@dimen/text_margin_5"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/sortBudget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Budget"
+                android:textColor="@color/black"
+                />
+
+            <RadioButton
+                android:id="@+id/sortName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Name"
+                android:textColor="@color/black"
+                />
+        </RadioGroup>
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/goBtn"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_small_height"
+            android:background="@drawable/common_btn_bg"
+            android:layout_below="@+id/selectSortOption"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/text_margin_5"
+            android:text="Go"
+            android:textColor="@color/white"
+            />
+    </RelativeLayout>
+</RelativeLayout>

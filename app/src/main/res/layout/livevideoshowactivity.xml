@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Live Video"
+            android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <SurfaceView
+        android:id="@+id/playersurface"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</LinearLayout>

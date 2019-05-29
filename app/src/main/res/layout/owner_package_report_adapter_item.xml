@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="24"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:layout_weight="1"
+        android:id="@+id/txtsrno"
+        android:background="@drawable/cell_shape_item"
+        />
+
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:id="@+id/txtname"
+        android:textSize="@dimen/_13sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_weight="2"
+        android:background="@drawable/cell_shape_item"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:gravity="center"
+        android:id="@+id/txtroomno"
+        android:textSize="@dimen/_13sdp"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:layout_weight="1"
+        android:background="@drawable/cell_shape_item"/>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textSize="@dimen/_13sdp"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/txtadv_a_dept_date"
+        android:visibility="visible"
+        android:layout_weight="2"
+        android:background="@drawable/cell_shape_item"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:textSize="@dimen/_13sdp"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:id="@+id/txtadv_a_dept_amount"
+        android:layout_weight="2"
+        android:background="@drawable/cell_shape_item"/>
+
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:text=""
+        android:textSize="@dimen/_13sdp"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:id="@+id/txtreturn_amount_date"
+        android:layout_weight="2"
+        android:background="@drawable/cell_shape_item"
+        />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txtreturn_amount"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txtpackage1"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txtpackage2"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txt_room_amount_revied_date"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txt_room_revied_amount"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txtConsuption_dept_amount"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textSize="@dimen/_13sdp"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp"
+            android:gravity="center"
+            android:id="@+id/txtConsuption_dept_amount_date"
+            android:layout_weight="2"
+            android:background="@drawable/cell_shape_item"
+            />
+
+        </LinearLayout>
+
+</LinearLayout>

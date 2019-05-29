@@ -1,0 +1,100 @@
+<resources>
+
+    <!-- xhdpi 720x1280 -->
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    
+     <!--Layout Top header size-->
+     <dimen name="header_height">58dp</dimen>
+
+     <dimen name="button_height">40dp</dimen>
+     <dimen name="input_text_field_height">40dp</dimen>
+     <dimen name="button_small_height">40dp</dimen>
+     <dimen name="edittext_height">43dp</dimen>
+     <dimen name="edittext_height_small">37dp</dimen>
+     <dimen name="edittext_height_large">90dp</dimen>
+     <dimen name="button_width">180px</dimen>
+     
+     <!-- Input text bg  -->
+     <dimen name="stroke">0.8dp</dimen>
+     
+     <!-- custom btn bg -->
+     <dimen name="custom_button_height">100px</dimen>
+     <dimen name="custom_button_width">350px</dimen>
+     <dimen name="custom_stroke">2dp</dimen>
+     <dimen name="custom_button_box_width">200px</dimen>
+     <dimen name="custom_button_circular_width">70px</dimen>
+
+
+     <dimen name="splashLogo_height">166px</dimen>
+     <dimen name="splashLogo_width">430px</dimen>
+     
+     <!-- corner button padding  -->
+     <dimen name="custom_button_pading">20dp</dimen>
+
+     <dimen name="custom_inputtextfield_pading">3dp</dimen>
+
+     <!-- circular btn height  -->
+     <dimen name="circular_btn_height">45dp</dimen>
+
+     <dimen name="text_margin_50">50dp</dimen>
+     <dimen name="text_margin_45">45dp</dimen>
+     <dimen name="text_margin_40">40dp</dimen>
+     <dimen name="text_margin_35">35dp</dimen>
+     <dimen name="text_margin_30">30dp</dimen>
+     <dimen name="text_margin_25">25dp</dimen>
+     <dimen name="text_margin_20">40dp</dimen>
+     <dimen name="text_margin_15">15dp</dimen>
+     <dimen name="text_margin_10">10dp</dimen>
+     <dimen name="text_margin_8">8dp</dimen>
+     <dimen name="text_margin_5">5dp</dimen>
+     <dimen name="text_margin_4">5dp</dimen>
+     <dimen name="text_margin_2">2dp</dimen>
+     <dimen name="text_margin_0">0dp</dimen>
+     
+     <dimen name="text_pading_50">50dp</dimen>
+     <dimen name="text_pading_45">45dp</dimen>
+     <dimen name="text_pading_40">40dp</dimen>
+     <dimen name="text_pading_35">35dp</dimen>
+     <dimen name="text_pading_30">30dp</dimen>
+     <dimen name="text_pading_25">25dp</dimen>
+     <dimen name="text_pading_20">20dp</dimen>
+     <dimen name="text_pading_15">15dp</dimen>
+     <dimen name="text_pading_10">10dp</dimen>
+     <dimen name="text_pading_8">8dp</dimen>
+     <dimen name="text_pading_5">5dp</dimen>
+     <dimen name="text_pading_4">5dp</dimen>
+     <dimen name="text_pading_2">2dp</dimen>
+     <dimen name="text_pading_0">0dp</dimen>
+     
+     
+     <dimen name="text_size_24">24sp</dimen>
+     <dimen name="text_size_22">22sp</dimen>
+     <dimen name="text_size_20">20sp</dimen>
+     <dimen name="text_size_18">18sp</dimen>
+     <dimen name="text_size_16">16sp</dimen>
+     <dimen name="text_size_15">15sp</dimen>
+     <dimen name="text_size_14">14sp</dimen>
+     <dimen name="text_size_13">13sp</dimen>
+     <dimen name="text_size_12">12sp</dimen>
+     <dimen name="text_size_11">11sp</dimen>
+     <dimen name="text_size_10">10sp</dimen>
+     <dimen name="text_size_8">8sp</dimen>
+     <dimen name="text_size_0">0sp</dimen>
+     
+     <dimen name="tab_layout_hight">40dp</dimen>
+     
+       <!--  imagelogo heightwidth --> 
+ <dimen name="image_width">288px</dimen> 
+  <dimen name="image_height">320px</dimen>
+
+ <dimen name="category_thumb_size">240px</dimen>
+     
+ <!-- offers list height-width -->
+     <dimen name="offer_image_width">280px</dimen>
+     <dimen name="offer_image_height">448px</dimen>
+     <dimen name="offer_image_height_large">400px</dimen>
+
+
+ <dimen name="searchList_dialog">768px</dimen>
+
+</resources>

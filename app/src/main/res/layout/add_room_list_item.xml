@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/layout_top"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/text_margin_10"
+        android:background="@color/white">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/room_no_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin_10"
+            android:text="Room 1"
+            android:textColor="@color/orange_color"
+            android:textSize="@dimen/text_size_18" />
+
+        <RelativeLayout
+            android:id="@+id/layout_rooms"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_margin_50"
+            android:layout_below="@+id/room_no_id"
+            android:layout_marginLeft="@dimen/text_margin_5">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/roomNo_input"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_toLeftOf="@+id/view_rooms"
+                android:background="@color/transparent"
+                android:hint="Room no"
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/roomNo_input"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_marginRight="@dimen/text_margin_5"
+                android:layout_toLeftOf="@+id/view_rooms"
+                android:background="@color/black" />
+
+            <View
+                android:id="@+id/view_rooms"
+                android:layout_width="@dimen/text_margin_5"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:id="@+id/bedselection_layout"
+                android:layout_height="@dimen/input_text_field_height"
+                android:layout_toRightOf="@+id/view_rooms"
+                android:paddingLeft="@dimen/_5sdp"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:id="@+id/no_bed"
+                    android:text="Bed"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_15sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    />
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:background="@drawable/down_arrow"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/bedselection_layout"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_marginRight="@dimen/text_margin_5"
+                android:layout_toRightOf="@+id/view_rooms"
+                android:background="@color/black" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/add_roomdetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_margin_50"
+            android:layout_below="@+id/layout_rooms"
+            android:layout_gravity="center_vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:paddingLeft="@dimen/_5sdp"
+                android:id="@+id/vacant_bed_layout"
+                android:layout_gravity="center_vertical"
+                android:layout_toLeftOf="@+id/view_bad"
+               >
+
+                <TextView
+                    android:layout_width="@dimen/_140sdp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.5"
+                    android:id="@+id/vacat_no_bed"
+                    android:text="Vacant Bed"
+                    android:gravity="center_vertical"
+                    android:textSize="@dimen/_15sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:textColor="@color/black"
+                    />
+                <RelativeLayout
+                    android:layout_width="@dimen/_30sdp"
+                    android:gravity="center"
+                    android:layout_weight="0.5"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/_8sdp"
+                        android:layout_height="@dimen/_8sdp"
+                        android:background="@drawable/down_arrow"
+                        />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/vacant_bed_layout"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:layout_toLeftOf="@+id/view_bad"
+                android:background="@color/black" />
+
+            <View
+                android:id="@+id/view_bad"
+                android:layout_width="@dimen/text_margin_10"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/amount_of_bed"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:inputType="number"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_toRightOf="@+id/view_bad"
+                android:layout_weight="1"
+                android:background="@color/transparent"
+                android:hint="Amount"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/amount_of_bed"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_toRightOf="@+id/view_bad"
+                android:background="@color/black" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/layout_choose_file"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/text_margin_50"
+            android:layout_below="@+id/add_roomdetail"
+            android:layout_gravity="center_vertical">
+
+            <Spinner
+                android:id="@+id/lat_bath_selector"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/_2sdp"
+                android:layout_toLeftOf="@+id/view_bath" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/lat_bath_selector"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:layout_toLeftOf="@+id/view_bath"
+                android:background="@color/black"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/view_bath"
+                android:layout_width="@dimen/text_margin_10"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/button_brouse_file"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/button_small_height"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_toRightOf="@+id/view_bath"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:background="@drawable/input_text_background"
+                android:text="Choose File"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone"
+                />
+        </RelativeLayout>
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/createrooms"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/layout_choose_file"
+            android:layout_marginBottom="@dimen/text_margin_10"
+            android:layout_marginLeft="@dimen/text_margin_20"
+            android:layout_marginRight="@dimen/text_margin_20"
+            android:layout_marginTop="@dimen/text_margin_10"
+            android:background="@drawable/custom_btn_focus"
+            android:text="Update"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/view_line_item"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/layout_top"
+        android:background="@color/black" />
+</RelativeLayout>

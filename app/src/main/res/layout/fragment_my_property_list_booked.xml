@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/topPanelBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/orange_color">
+
+        <ImageButton
+            android:id="@+id/main_header_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/text_pading_15"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/PropertyNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tenant List"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+
+        <ImageButton
+            android:id="@+id/editPropertyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/text_pading_15"
+            android:src="@android:drawable/ic_menu_edit"
+            android:visibility="gone" />
+        <ImageButton
+            android:id="@+id/deactive_user"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/text_pading_15"
+            android:src="@drawable/view_list"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_1sdp"
+            android:gravity="center">
+        <ImageButton
+            android:id="@+id/holduser_list"
+            android:layout_width="@dimen/_35sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:scaleType="fitXY"
+            android:background="@android:color/transparent"
+             android:src="@drawable/hold"
+            android:visibility="visible" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/propertyList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/text_margin_5"
+        android:layout_marginRight="@dimen/text_margin_5"
+        android:clipToPadding="false"
+        android:layout_below="@+id/topPanelBar"
+        android:divider="@android:color/transparent">
+
+    </ListView>
+
+
+</RelativeLayout>

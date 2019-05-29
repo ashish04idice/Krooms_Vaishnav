@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/flback_button"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Change Room"
+            android:textAllCaps="false"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_weight="0.6"
+
+        >
+        <ImageView
+            android:layout_marginTop="@dimen/_30sdp"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/k_rooms"
+            android:id="@+id/imageshow"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_200sdp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:gravity="center"
+        android:layout_weight="0.10"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/btnvacantroom"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:text="Vacant Room"
+            android:background="@drawable/button_back"
+            android:textAllCaps="false"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@android:color/white"
+            android:textStyle="normal"
+            />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="@dimen/_200sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="0.10"
+        android:id="@+id/layout_save"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="0dp">
+
+        <Button
+            android:id="@+id/btnchangeroom"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/custom_btn_focus"
+            android:text="Change Room"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_15sdp"
+            android:textStyle="normal" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

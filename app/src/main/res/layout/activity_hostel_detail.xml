@@ -1,0 +1,1496 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context="com.hostelapp.HostelDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/topPanelBar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:background="@color/orange_color">
+
+        <ImageButton
+            android:id="@+id/main_header_back"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/text_pading_15"
+            android:src="@drawable/ic_back_arrow" />
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/PropertyNameTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Property Detail"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20" />
+
+        <ImageButton
+            android:id="@+id/editPropertyBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:padding="@dimen/text_pading_15"
+            android:src="@android:drawable/ic_menu_edit"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/addPropertyBtnlayout"
+        android:layout_below="@+id/topPanelBar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/offer_image_height">
+
+            <RelativeLayout
+                android:id="@+id/property_photos_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"                >
+
+
+                <com.krooms.hostel.rental.property.app.autorotateviewpager.AutoScrollViewPager
+                    android:id="@+id/property_photos"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/offer_image_height"
+                    android:layout_margin="@dimen/text_margin_10" >
+
+                </com.krooms.hostel.rental.property.app.autorotateviewpager.AutoScrollViewPager>
+
+
+                <com.krooms.hostel.rental.property.app.indicator.CirclePageIndicator
+                    android:id="@+id/pagerIndicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_30"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/text_margin_10"
+                    android:padding="@dimen/text_margin_5" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/shareBtn"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="32dp"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:layout_toLeftOf="@+id/propertyVideoBtn"
+                    android:background="@drawable/share_ico" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/propertyVideoBtn"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="32dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/text_margin_10"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:background="@drawable/video_ico" />
+            </RelativeLayout>
+
+
+            <!--<HorizontalListView
+                android:id="@+id/property_photos"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/image_height"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="@dimen/text_margin_5"
+                android:visibility="gone"
+                app:dividerWidth="@dimen/text_margin_2">
+
+            </HorizontalListView>-->
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/headerHostelDetail_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/property_photos_layout"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:id="@+id/propertyNameLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/hostelDetailname_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin_2"
+                        android:gravity="center"
+                        android:text="Hostel name"
+                        android:textSize="@dimen/text_size_18" />
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/hostelDetail_address_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hostelDetailname_id"
+                        android:layout_margin="@dimen/text_margin_5"
+                        android:gravity="center"
+                        android:text="Hostel address"
+                        android:textSize="@dimen/text_size_14" />
+
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/propertyDescription_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/headerHostelDetail_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:id="@+id/propertyDescription_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/hostelDetail_address_id"
+                    android:layout_margin="@dimen/text_margin_5">
+
+                    <RelativeLayout
+                        android:id="@+id/propertyDescriptionTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/propertyDetailTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/text_margin_35"
+                            android:padding="@dimen/text_pading_8"
+                            android:text="Property Detail"
+                            android:textColor="@color/orange_color" />
+
+                        <ImageButton
+                            android:id="@+id/propertyDescriptionUpDownBtn"
+                            android:layout_width="@dimen/text_margin_30"
+                            android:layout_height="@dimen/text_margin_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_margin_10"
+                            android:background="@drawable/ic_down_caret"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/propertyDescription_text_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        android:layout_below="@+id/propertyDescriptionTitleLayout"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true">
+
+                        <LinearLayout
+                            android:id="@+id/description_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:orientation="horizontal" >
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/propertyDescriptionTitle"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.6"
+                                android:visibility="gone"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:text="Description :"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/property_description_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.9"
+                                android:layout_marginTop="@dimen/_8sdp"
+                                android:gravity="center_vertical"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_desc_line"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_below="@+id/description_layout"
+                            android:background="@color/orange_color" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/textview_property_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_desc_line"
+                            android:text="PROPERTY INFRASTRUCTURE"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <LinearLayout
+                            android:id="@+id/total_area_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_property_address"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/total_area_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_total_area"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/total_area_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/total_area_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/super_builtup_area_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/total_area_layout"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/super_builtup_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_super_builtup_area"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/super_builtup_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/super_builtup_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_feature"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_below="@+id/super_builtup_area_layout"
+                            android:background="@color/orange_color" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/textview_feature_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_feature"
+                            android:text="PROPERTY FEATURES"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <LinearLayout
+                            android:id="@+id/property_face_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_feature_title"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/property_face_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_property_face"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/property_face_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/property_face_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/kitchen_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/property_face_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/kitchen_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_kitchen"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/kitchen_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/kitchen_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/kitchen_type_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/kitchen_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/kitchen_type_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_kitchen_type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/kitchen_type_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/kitchen_type_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/furnish_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/kitchen_type_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/furnish_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_furnish"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/furnish_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/furnish_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/water_supply_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/furnish_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/water_supply_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_water_supply"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/water_supply_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/water_supply_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/power_backup_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/water_supply_layout"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/power_backup_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_power_backup"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/power_backup_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/power_backup_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_distance"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_below="@+id/power_backup_layout"
+                            android:background="@color/orange_color" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/textview_distance_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_distance"
+                            android:text="PROPERTY DISTANCE"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+
+                        <LinearLayout
+                            android:id="@+id/distance_railwaystation_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_distance_title"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_railwaystation_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_railway_station"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_railwaystation_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/distance_railwaystation_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/distance_busstand_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/distance_railwaystation_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_busstand_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_bus_stand"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_busstand_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/distance_busstand_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/distance_airport_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/distance_busstand_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_airport_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_airport"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/distance_airport_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/distance_airport_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nearestSqareName_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/distance_airport_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/nearestSqareName_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_nearest_sq."
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/nearestSqareName_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/nearestSqareName_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/nearestSqareDistance_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nearestSqareName_layout"
+                            android:layout_centerVertical="true"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/nearestSqareDistance_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_nearest_sq_distance"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/nearestSqareDistance_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/nearestSqareDistance_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_condition"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_below="@+id/nearestSqareDistance_layout"
+                            android:background="@color/orange_color" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/textview_condition_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_condition"
+                            android:text="PROPERTY PREREQUISITE CONDITION"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <LinearLayout
+                            android:id="@+id/allowedtenant_type_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_condition_title"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowedtenant_type_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_tenant_type"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowedtenant_type_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/allowedtenant_type_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/curfew_time_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/allowedtenant_type_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/curfew_time_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_curfew_time"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/curfew_time_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/curfew_time_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/no_of_vehicles_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/curfew_time_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/no_of_vehicles_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_no_of_vehicle"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/no_of_vehicles_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/no_of_vehicles_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/allowed_smoking_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/no_of_vehicles_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowed_smoking_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_smoking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowed_smoking_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/allowed_smoking_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/allowed_drinking_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/allowed_smoking_layout"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowed_drinking_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_drinking"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/allowed_drinking_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/allowed_drinking_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/no_of_pepole_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/allowed_drinking_layout"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/no_of_pepole_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_no_of_people"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/no_of_pepole_Value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/no_of_pepole_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/view_money_policies"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_below="@+id/no_of_pepole_layout"
+                            android:background="@color/orange_color" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/textview_money_policies_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/view_money_policies"
+                            android:text="PROPERTY MONETARY POLICIES"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <LinearLayout
+                            android:id="@+id/layout_rent_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/textview_money_policies_title"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_rent_amount_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_rent_amount"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_rent_amount_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_advance_amount"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_rent_amount"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_advance_amount_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_advance_amount"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_advance_amount_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toRightOf="@+id/no_of_pepole_title"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_maintenance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_advance_amount"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_maintenance_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_maintenance_title"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_maintenance_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_water_bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_maintenance"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_water_bill_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_water_bill"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_water_bill_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_other_expensess"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_water_bill"
+                            android:layout_marginBottom="@dimen/text_margin_10"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_other_expensess_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_other_expensess"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_other_expensess_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/layout_electricity_bill"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/layout_other_expensess"
+                            android:layout_marginBottom="@dimen/text_margin_10"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:orientation="horizontal">
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_electricity_bill_title"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:layout_marginLeft="@dimen/text_margin_5"
+                                android:gravity="center_vertical"
+                                android:text="@string/str_elecricity_bill"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_16" />
+
+                            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                                android:id="@+id/textview_electricity_bill_value"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center_vertical"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/text_size_14" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/aminitisList_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/propertyDescription_layout_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:id="@+id/aminitiesList_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin_5">
+
+                    <RelativeLayout
+                        android:id="@+id/aminitiesTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/aminitiesTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/text_margin_35"
+                            android:padding="@dimen/text_pading_8"
+                            android:text="Amenities"
+                            android:textColor="@color/orange_color" />
+
+                        <ImageButton
+                            android:id="@+id/aminitiesUpDownBtn"
+                            android:layout_width="@dimen/text_margin_30"
+                            android:layout_height="@dimen/text_margin_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_margin_10"
+                            android:background="@drawable/ic_down_caret"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+                    </RelativeLayout>
+
+                    <com.krooms.hostel.rental.property.app.autorotateviewpager.AutoScrollViewPager
+                        android:id="@+id/aminitiesList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_width"
+                        android:layout_below="@+id/aminitiesTitleLayout"
+                        android:visibility="gone"
+                        app:dividerWidth="@dimen/text_margin_5" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/featuresList_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aminitisList_layout_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:id="@+id/featuresList_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/text_margin_5">
+
+                    <RelativeLayout
+                        android:id="@+id/freaturesTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/freaturesTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/text_margin_35"
+                            android:background="@drawable/gradient"
+                            android:padding="@dimen/text_pading_8"
+                            android:text="Features"
+                            android:textColor="@color/orange_color" />
+
+                        <ImageButton
+                            android:id="@+id/freaturesUpDownBtn"
+                            android:layout_width="@dimen/text_margin_30"
+                            android:layout_height="@dimen/text_margin_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_margin_10"
+                            android:background="@drawable/ic_down_caret"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+                    </RelativeLayout>
+
+                    <!--<HorizontalListView
+                        android:id="@+id/featuresList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_width"
+                        android:layout_below="@+id/freaturesTitleLayout"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:dividerWidth="@dimen/text_margin_5" />-->
+
+                    <com.krooms.hostel.rental.property.app.autorotateviewpager.AutoScrollViewPager
+                        android:id="@+id/featuresList"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/button_width"
+                        android:layout_below="@+id/freaturesTitleLayout"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        app:dividerWidth="@dimen/text_margin_5" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/location_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/featuresList_layout_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+
+                <RelativeLayout
+                    android:id="@+id/location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/featuresList_layout_id"
+                    android:layout_margin="@dimen/text_margin_5">
+
+                    <RelativeLayout
+                        android:id="@+id/locationTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/locationTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/text_margin_35"
+                            android:background="@drawable/gradient"
+                            android:padding="@dimen/text_pading_8"
+                            android:text="Location"
+                            android:textColor="@color/orange_color" />
+
+                        <ImageButton
+                            android:id="@+id/propertyLocationMapUpDownBtn"
+                            android:layout_width="@dimen/text_margin_30"
+                            android:layout_height="@dimen/text_margin_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_margin_10"
+                            android:background="@drawable/ic_down_caret"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/propertyLocationMap"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:layout_below="@+id/locationTitleLayout"
+                        android:visibility="gone" />
+
+
+                    <com.google.android.gms.maps.MapView
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:id="@+id/mapView"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/image_height"
+                        android:layout_below="@+id/locationTitleLayout"
+                        android:visibility="gone"
+                        >
+                    </com.google.android.gms.maps.MapView>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/bedSystem_layout_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/location_layout_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:id="@+id/bedSystem_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/location_layout_id"
+                    android:layout_margin="@dimen/text_margin_5">
+
+                    <RelativeLayout
+                        android:id="@+id/bedSystemTitleLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/gradient">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/bedSystemTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/text_margin_35"
+                            android:background="@drawable/gradient"
+                            android:padding="@dimen/text_pading_8"
+                            android:text="Select Bed"
+                            android:textColor="@color/orange_color" />
+
+                        <ImageButton
+                            android:id="@+id/bedSystemGridUpDownBtn"
+                            android:layout_width="@dimen/text_margin_30"
+                            android:layout_height="@dimen/text_margin_15"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="@dimen/text_margin_10"
+                            android:background="@drawable/ic_down_caret"
+                            android:clickable="false"
+                            android:focusable="false"
+                            />
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/bedSystemGrid"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/offer_image_height"
+                        android:layout_below="@+id/bedSystemTitleLayout"
+                        android:background="@color/white"
+                        android:visibility="gone"
+                        android:fadeScrollbars="false"
+                        />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/hireDateToLeaveDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bedSystem_layout_id"
+                android:layout_margin="@dimen/text_margin_5">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/hireDateAndLeaveDateSelection"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin_5"
+                        android:orientation="horizontal">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/hireDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_text_field_height"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:hint="Hire Date"
+                            android:paddingLeft="@dimen/text_pading_4"
+                            android:paddingRight="@dimen/text_pading_4"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/leaveDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/input_text_field_height"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical"
+                            android:hint="Leave Date"
+                            android:paddingLeft="@dimen/text_pading_4"
+                            android:paddingRight="@dimen/text_pading_4"
+                            android:textColorHint="@color/black"
+                            android:textSize="@dimen/text_size_18" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/hireDateAndLeaveDateSelection"
+                        android:layout_marginTop="@dimen/text_margin_5"
+                        android:orientation="horizontal">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Duration:"
+                            android:textSize="@dimen/text_size_18" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/durationText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/total_amount_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/hireDateToLeaveDate"
+                android:layout_margin="@dimen/text_margin_5">
+
+
+                <LinearLayout
+                    android:id="@+id/total_amount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/bedSystem_layout_id"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:orientation="horizontal">
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="Total Amount"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_24" />
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/priceOfSelectedBed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="2500.00"
+                        android:textColor="@color/orange_color"
+                        android:textSize="@dimen/text_size_24" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/addPropertyBtnlayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_height"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/text_margin_5"
+        android:background="@drawable/ic_book_btn">
+
+        <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            card_view:cardCornerRadius="8dp"
+            >
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/bookPropertyBtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_small_height"
+                android:layout_gravity="center"
+                android:background="@drawable/common_btn_bg_blue"
+                android:clickable="false"
+                android:focusable="false"
+                android:gravity="center"
+                android:text="Book Property"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <ImageView
+        android:id="@+id/student_loader"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_30sdp"
+        android:background="@drawable/red_loader"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="#ff5d27"
+        android:layout_height="@dimen/_45sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:id="@+id/attendce_heading"
+            android:text="Tenant Attendence"
+            android:textAllCaps="true"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentRight="true"
+            android:id="@+id/Loginattendece"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/list"
+                />
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_below="@+id/header"
+        android:id="@+id/layoutone"
+        android:gravity="center"
+        android:layout_height="@dimen/_30sdp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="Date="
+                android:gravity="center"
+                android:textColor="#000000"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="normal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text=""
+                android:id="@+id/date_textview"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="normal"
+                />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_alignParentRight="true"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="Time="
+                android:gravity="center"
+                android:textColor="#000000"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="normal"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text=""
+                android:id="@+id/time_textview"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="normal"
+                />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="5"
+        android:id="@+id/layouttwo"
+        android:layout_below="@+id/layoutone"
+        android:layout_height="@dimen/_45sdp">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="P"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="normal"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="=Present"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="A"
+                android:gravity="center"
+                android:textColor="#000000"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="normal"
+                android:layout_height="match_parent" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:text="=Absent"
+                android:gravity="center"
+                android:paddingLeft="@dimen/_3sdp"
+                android:textColor="#000000"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/layouttwo"
+        android:id="@+id/twoline"
+        android:background="#000000"></View>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:weightSum="16"
+        android:id="@+id/attendenceheader"
+        android:layout_below="@+id/twoline"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_40sdp">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Room"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:textSize="@dimen/_14sdp"
+            />
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="#000000"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Tenant name"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_weight="4.5"
+            android:textSize="@dimen/_14sdp"/>
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="#000000"></View>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Time"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:layout_weight="3"
+            android:textSize="@dimen/_14sdp"
+            />
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="#000000"></View>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="A/P"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="2"
+            android:textSize="@dimen/_14sdp"/>
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:background="#000000"></View>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Reason"
+            android:textColor="#000000"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_weight="3.5"
+            android:paddingRight="@dimen/_3sdp"
+            android:textSize="@dimen/_14sdp"/>
+
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_below="@+id/attendenceheader"
+        android:id="@+id/thirdline"
+        android:background="#000000"></View>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/thirdline"
+        android:layout_above="@+id/submitlayoutmain"
+        android:id="@+id/listview_attendence"
+        android:layout_height="match_parent">
+    </ListView>
+
+</RelativeLayout>

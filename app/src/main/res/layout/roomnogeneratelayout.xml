@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/topPanelBar"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="left|center_vertical"
+            android:text="ADD ROOMS" android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_rooms_top"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/button_add_more"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:background="@drawable/input_text_background_rooms"
+                android:paddingLeft="@dimen/text_pading_10"
+                android:paddingRight="@dimen/text_pading_10"
+                android:text="Exit"
+                android:textColor="@drawable/white_text_selector"
+                android:textSize="@dimen/text_size_18"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+   <ListView
+        android:layout_width="match_parent"
+        android:id="@+id/listviewroomno"
+        android:layout_height="match_parent"
+        android:descendantFocusability="afterDescendants"
+        >
+    </ListView>
+
+</LinearLayout>

@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_50sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/flback_button"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:src="@drawable/ic_back_arrow"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Room Changes And Exit"
+            android:textAllCaps="false"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:id="@+id/Scrollroomchange"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:layout_gravity="center"
+                android:src="@drawable/k_rooms" />
+
+            <LinearLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_22sdp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_roomchange"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_btn_focus"
+                    android:text="Room Change"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            //
+            <LinearLayout
+                android:layout_width="@dimen/_200sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:gravity="center"
+                android:id="@+id/lay_enrollowner"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_exittenant"
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_btn_focus"
+                    android:text="Exit Tenant"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+            //
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    //clear due
+    <ScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/Scrollcleardue"
+        android:visibility="gone"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_view"
+                android:layout_gravity="center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                card_view:cardCornerRadius="@dimen/_2sdp"
+                card_view:contentPadding="@dimen/_10sdp">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:orientation="vertical"
+                    android:layout_height="fill_parent">
+
+                    <ImageView
+                        android:layout_width="@dimen/_200sdp"
+                        android:layout_height="@dimen/_200sdp"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:background="@drawable/k_rooms"
+                        android:layout_gravity="center"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
+                        android:layout_height="@dimen/_45sdp">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="@dimen/_130sdp"
+                            android:layout_height="match_parent"
+                            android:textStyle="normal"
+                            android:text="Due Payment"
+                            android:gravity="center"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:textSize="@dimen/_18sdp"
+                            android:layout_alignParentTop="true"/>
+
+                        <EditText
+                            android:id="@+id/txtdueamout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Due Payment"
+                            android:padding="@dimen/_5sdp"
+                            android:gravity="center"
+                            android:background="@drawable/input_text_background"
+                            android:layout_marginLeft="@dimen/_10sdp"
+                            android:textSize="@dimen/_16sdp"
+                            android:layout_below="@+id/textView"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="No Dues"
+                    android:id="@+id/due_clear"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="@drawable/custom_btn_focus"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="PDF Download"
+                    android:id="@+id/exitdownload"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:textSize="@dimen/_15sdp"
+                    android:background="@drawable/custom_btn_focus"
+                    android:textColor="@color/white"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    //
+
+</LinearLayout>

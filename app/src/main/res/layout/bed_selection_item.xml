@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/roomTitlelayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/text_margin_50">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/room_no_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="@dimen/text_margin_5"
+            android:text="Room"
+            android:textColor="@color/orange_color"
+            android:textSize="@dimen/text_size_18" />
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/roomImageUploadBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/text_margin_35"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/text_margin_5"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone"
+            android:background="@drawable/custom_btn"
+            />
+    </RelativeLayout>
+
+    <GridView
+        android:id="@+id/bedGrid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/roomTitlelayout"
+        android:layout_centerInParent="true"
+        android:numColumns="4"></GridView>
+</RelativeLayout>

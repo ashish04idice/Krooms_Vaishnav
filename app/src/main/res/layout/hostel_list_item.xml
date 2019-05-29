@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+        android:id="@+id/resultTypeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Similer Result"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/text_margin_5"
+        android:textColor="@color/orange_color"
+        android:textSize="@dimen/text_size_18"
+        android:visibility="gone"
+        />
+
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
+        android:background="@color/white"
+        android:layout_below="@+id/resultTypeTitle"
+        >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+
+            <RelativeLayout
+                android:id="@+id/mainListItem"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offer_image_height"
+                >
+
+                <ImageView
+                    android:id="@+id/property_icon_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/offer_image_height"
+                     />
+                
+                <ImageView
+                    android:layout_width="@dimen/text_margin_25"
+                    android:layout_height="@dimen/text_margin_25"
+                    android:background="@color/grey"
+                    android:layout_alignParentRight="true"
+                    android:layout_margin="@dimen/text_margin_5"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/slidingmenu_offset"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/black_with_opacity_new"
+                    android:orientation="horizontal"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        >
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/property_name_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/text_margin_5"
+                        android:text="Property Name"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/property_address_id"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/text_margin_5"
+                        android:layout_marginLeft="@dimen/text_margin_5"
+                        android:text="Property Address"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_14" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        >
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/property_type_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_above="@+id/property_address_id"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:text="Property Name"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/property_price_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_marginBottom="@dimen/text_margin_5"
+                            android:layout_marginLeft="@dimen/text_margin_5"
+                            android:text="Property Address"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_12" />
+                    </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/propertyLocation"
+                        android:layout_width="@dimen/text_margin_40"
+                        android:layout_height="@dimen/text_margin_30"
+                        android:layout_margin="@dimen/text_margin_5"
+                        android:layout_gravity="center_vertical"
+                        android:background="@drawable/map"
+                        android:visibility="gone"
+                        />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

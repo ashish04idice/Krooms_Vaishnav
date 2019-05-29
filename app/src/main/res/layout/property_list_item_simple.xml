@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/text_margin_5">
+
+        <RelativeLayout
+            android:id="@+id/propertyTypeTitleLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/header_height">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/propertyTypeTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/text_margin_5"
+                android:text="Hostel"
+                android:textColor="@color/orange_color"
+                android:textSize="@dimen/text_size_20" />
+
+            <Button
+                android:id="@+id/viewMoreBtn"
+                android:layout_width="@dimen/button_width"
+                android:visibility="gone"
+                android:layout_height="32dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:background="@drawable/view_all" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/propertyTypeTitleLayout"
+            >
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/offer_image_height"
+                android:layout_marginTop="@dimen/text_margin_4" />
+
+            <com.krooms.hostel.rental.property.app.indicator.CirclePageIndicator
+                android:id="@+id/pagerIndicator"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/text_margin_30"
+                android:layout_below="@+id/pager"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="@dimen/text_margin_10"
+                android:padding="@dimen/text_margin_5"
+                />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

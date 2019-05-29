@@ -1,0 +1,645 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.krooms.hostel.rental.property.app.activity.EditRCUTenantProfessionalDetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange_color">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/textView_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawableLeft="@drawable/ic_back_arrow"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="left|center_vertical"
+            android:text="TENANT INFORMATION"
+            android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout_header"
+        android:layout_centerHorizontal="true">
+
+        <RelativeLayout
+            android:id="@+id/rcuFromScrollMainView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin_10"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/tenanntDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginRight="@dimen/text_margin_5"
+                android:layout_marginTop="@dimen/text_margin_5"
+                android:gravity="center_vertical"
+                android:text="TENANT PROFESSIONAL DETAIL"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/edittext_institute_office_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tenanntDetailTitle"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@drawable/ic_black_line"
+                android:hint="Institute/Office Address"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/edittext_height"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/edittext_prof_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/edittext_institute_office_address"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@drawable/ic_black_line"
+                android:hint="Contact No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <Spinner
+                android:id="@+id/spinner_work_detail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/edittext_prof_contact_no" />
+
+            <View
+                android:id="@+id/div1"
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_below="@+id/spinner_work_detail"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@color/black"
+
+                />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/guarantorDetailTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/div1"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:gravity="center_vertical"
+                android:text="GUARANTOR DETAIL"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/edittext_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guarantorDetailTitle"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@drawable/ic_black_line"
+                android:hint="Name"
+                android:inputType="textPersonName|textCapSentences"
+                android:minHeight="@dimen/edittext_height"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/edittext_prmanent_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edittext_name"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@drawable/ic_black_line"
+                android:hint="Permanent Address"
+                android:inputType="textMultiLine"
+                android:minHeight="@dimen/edittext_height"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/edittext_guarantor_contact_no"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/edittext_prmanent_address"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:background="@drawable/ic_black_line"
+                android:hint="Contact No."
+                android:inputType="phone"
+                android:maxLength="10"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/text_size_16" />
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/otherInfoTitle"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_below="@+id/edittext_guarantor_contact_no"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:gravity="center_vertical"
+                android:text="OTHER INFORMATION"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18" />
+
+            <RelativeLayout
+                android:id="@+id/vehicleInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/otherInfoTitle"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_vehicle_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/vehicle_nodoc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Vehicle Registration No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/vehicle_nodoc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_vehicle_no"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_vehicle_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/voterIdInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vehicleInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_votar_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/votar_iddoc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Voter Id Card No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/votar_iddoc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_voter_id"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_voter_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/armLicenceInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/voterIdInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_arm_licences_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/arm_licences_nodoc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Arm License No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/arm_licences_nodoc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_arm_licences_no"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_arm_licences_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/armLicenceIssuing_office"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/armLicenceInfoLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:background="@drawable/ic_black_line"
+                android:hint="Issuing office name"
+                android:textSize="@dimen/text_size_16"
+
+                />
+
+            <RelativeLayout
+                android:id="@+id/drivinglicInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/armLicenceIssuing_office"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_driving_lic_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/driving_lic_nodoc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Driving License No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/driving_lic_nodoc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_driving_lic_no"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_driving_lic_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold"
+
+                    />
+            </RelativeLayout>
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/driving_lic_issuing_office"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/drivinglicInfoLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:background="@drawable/ic_black_line"
+                android:hint="Issuing Office Name"
+                android:textSize="@dimen/text_size_16"
+                />
+
+            <RelativeLayout
+                android:id="@+id/telephoneInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/driving_lic_issuing_office"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_info_phoneno"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/view_info_no"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Telephone No."
+                    android:inputType="phone"
+                    android:maxLength="13"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:id="@+id/view_info_no"
+                    android:layout_width="5dp"
+                    android:layout_height="10dp"
+                    android:layout_centerInParent="true" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_info_mobileno"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_toRightOf="@+id/view_info_no"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Mobile No."
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/aadhaarCardInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/telephoneInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/edittext_aadhaar_card_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/aadhaar_card_nodoc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Aadhaar Card No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/aadhaar_card_nodoc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_aadhaar_card_no"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_aadhaar_card_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/RashanCardInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/aadhaarCardInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/RashanCard_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/RashanCard_doc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Rashan Card No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/RashanCard_doc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button__browse_RashanCard"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button__browse_RashanCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/pasportInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RashanCardInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/pasport_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/pasport_doc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Passport No."
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/pasport_doc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button_browse_pasport"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_browse_pasport"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+
+            <RelativeLayout
+                android:id="@+id/otherIdentityCardInfoLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/pasportInfoLayout"
+                android:layout_marginTop="@dimen/text_margin_10">
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/otherIdentityCard_no"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/edittext_height"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/otherIdentityCard_doc_img"
+                    android:background="@drawable/ic_black_line"
+                    android:hint="Other Identity Card"
+                    android:inputType="text"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/grey"
+                    android:textSize="@dimen/text_size_16" />
+
+                <ImageView
+                    android:id="@+id/otherIdentityCard_doc_img"
+                    android:layout_width="@dimen/button_height"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:layout_marginRight="@dimen/text_margin_5"
+                    android:layout_toLeftOf="@+id/button__browse_otherIdentityCard"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button__browse_otherIdentityCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/input_text_background"
+                    android:maxLength="15"
+                    android:paddingLeft="@dimen/text_pading_5"
+                    android:paddingRight="@dimen/text_pading_5"
+                    android:text="Browse..."
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_14"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                android:id="@+id/detailsVerificationInput"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:layout_below="@+id/otherIdentityCardInfoLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:background="@drawable/ic_black_line"
+                android:hint="Details Related To Verification"
+                android:textSize="@dimen/text_size_16"
+                />
+
+            <RelativeLayout
+                android:id="@+id/submitButtonLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detailsVerificationInput"
+                android:layout_marginTop="@dimen/text_margin_20">
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/button_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_margin="@dimen/text_margin_20"
+                    android:background="@drawable/common_btn_bg"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="?android:attr/progressBarStyleLarge"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_centerInParent="true"
+                    android:clickable="true" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view_bottom"
+                android:layout_width="match_parent"
+                android:layout_height="5dp" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/statepopup_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/orange_color">
+
+        <TextView
+            android:id="@+id/statepopup_heading"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="Select Articals "/>
+
+        <RelativeLayout
+            android:id="@+id/country_cross_layout"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:visibility="gone"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_height="@dimen/_22sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:background="@drawable/cross"
+                android:layout_centerVertical="true"
+
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/layout_sample"
+        android:orientation="vertical"
+        android:layout_below="@id/statepopup_header"
+        android:layout_height="wrap_content">
+
+        <ListView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/listView_inventory"
+            android:divider="@color/green_color"
+            >
+        </ListView>
+        <ImageView
+            android:id="@+id/student_loader"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:background="@drawable/red_loader"
+            android:visibility="gone"
+            android:layout_gravity="center"
+            android:layout_below="@+id/listView_inventory"
+            android:divider="@color/green_color"
+            android:layout_centerInParent="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_alignParentBottom="true"
+            android:background="@color/white"
+            android:layout_height="@dimen/_45sdp">
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Cancle"
+                android:id="@+id/alertCancelBtn"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:layout_marginRight="@dimen/_1sdp"
+                android:background="@color/orange_color"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="Add"
+                android:id="@+id/alertAddBtn"
+                android:gravity="center"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@color/white"
+                android:background="@color/orange_color"
+                android:layout_height="match_parent" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
+
+
+

@@ -1,0 +1,676 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/student_loader"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_width="@dimen/_30sdp"
+        android:background="@drawable/red_loader"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_pading_10"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="center"
+            android:text="Payment Option" android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="normal" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        >
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/text_margin_25">
+
+            <ImageView
+                android:id="@+id/paymentSmileIcon"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/pay_face" />
+
+            <LinearLayout
+                android:id="@+id/total_amount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paymentSmileIcon"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Adv. Amount"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/totalAmount_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            //room rant
+
+            <LinearLayout
+                android:id="@+id/room_rant"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_amount"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Room Rent"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/roomrant_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            //
+
+
+
+            //room rant
+
+            <LinearLayout
+                android:id="@+id/room_remainingamount"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_rant"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Monthly Paid"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/roomremaining_output"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            //
+
+
+
+            //paid amount hint
+
+            <LinearLayout
+                android:id="@+id/room_remainingamounthint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_remainingamount"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Monthly Paid"
+                    android:visibility="invisible"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/roomremaining_outputhint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:text="Room Rent - Monthly Paid"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+            //
+
+            <LinearLayout
+                android:id="@+id/total_amount_paid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/room_remainingamounthint"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Remaining"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/totalAmount_output_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+
+            // payble amount
+
+            //payble amount hint
+
+            <LinearLayout
+                android:id="@+id/paybleamounthint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_amount_paid"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Monthly Paid"
+                    android:visibility="invisible"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/paybleamount_outputhint"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:singleLine="true"
+                    android:text="Adv. Amount - Remaining"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+            //
+
+
+            <LinearLayout
+                android:id="@+id/total_amount_payble"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paybleamounthint"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Due Amount"
+                    android:id="@+id/txtfinalamouttxt"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <EditText
+                    android:id="@+id/totalpaybleamount_output_paid"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_weight="2"
+                    android:background="@drawable/input_text_background"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/text_margin_10"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:editable="false"
+                    android:singleLine="true"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+
+            //hint
+
+
+            <LinearLayout
+                android:id="@+id/finalamounthint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_amount_payble"
+                android:layout_marginTop="@dimen/text_margin_5"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_10sdp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Monthly Paid"
+                    android:visibility="invisible"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/finalamounthint_outputhint"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="center_vertical"
+                    android:paddingRight="@dimen/text_margin_10"
+                    android:text=""
+                    android:maxLines="2"
+                    android:textColor="@color/green_color"
+                    android:textSize="@dimen/text_size_12" />
+
+            </LinearLayout>
+
+            //
+
+
+
+
+            <LinearLayout
+                android:id="@+id/paymentOption1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/finalamounthint"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Payment VIA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioGroup
+                    android:id="@+id/paymentRadioGroup1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <RadioButton
+                        android:id="@+id/casePaymentRadioBtn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Cash"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <RadioButton
+                        android:id="@+id/onlinePaymentRadioBtn1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Online"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            //for cheque entry
+
+            <LinearLayout
+                android:id="@+id/paymentOption"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/total_amount_payble"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/text_pading_5">
+
+                <TextView
+                    android:layout_width="@dimen/_150sdp"
+                    android:layout_height="@dimen/_40sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="Payment VIA"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <RadioGroup
+                    android:id="@+id/paymentRadioGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="2"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RadioButton
+                        android:id="@+id/casePaymentRadioBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Cash"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <RadioButton
+                        android:id="@+id/onlinePaymentRadioBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Online"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16"/>
+
+                    <RadioButton
+                        android:id="@+id/chequePaymentRadioBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Cheque"
+                        android:visibility="gone"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/paymentOption"
+                android:id="@+id/cheque_details"
+                android:orientation="vertical"
+                >
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paymentOption"
+                    android:layout_marginTop="@dimen/text_margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone"
+                    android:id="@+id/layoutcomment"
+                    android:padding="@dimen/text_pading_5">
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Comment"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <EditText
+                        android:id="@+id/txt_chequeno"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="2"
+                        android:background="@drawable/input_text_background"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/text_margin_10"
+                        android:paddingRight="@dimen/text_margin_10"
+                        android:singleLine="true"
+                        android:maxLength="35"
+                        android:textColor="@color/green_color"
+                        android:textSize="@dimen/text_size_16" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/paymentOption"
+                    android:layout_marginTop="@dimen/text_margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    android:visibility="gone"
+                    android:padding="@dimen/text_pading_5">
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        android:text="Bank Name"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <EditText
+                        android:id="@+id/txt_bankname"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_weight="2"
+                        android:background="@drawable/input_text_background"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/text_margin_10"
+                        android:paddingRight="@dimen/text_margin_10"
+                        android:singleLine="true"
+                        android:textColor="@color/green_color"
+                        android:textSize="@dimen/text_size_16" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+            //
+
+            <RelativeLayout
+                android:id="@+id/termsAndConditionMsg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cheque_details"
+                android:layout_marginTop="@dimen/text_margin_25"
+                android:visibility="gone">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/termsAndConditionMsgTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/terms_and_condition_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_20" />
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:id="@+id/termsAndConditionText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/termsAndConditionMsgTitle"
+                        android:maxLines="3"
+                        android:scrollbars="vertical"
+                        android:text="@string/terms_and_condition_msg"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_12"
+
+                        />
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/termsAndCondition"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:visibility="gone"
+                android:layout_below="@+id/termsAndConditionMsg"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/checkeBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="I agree with"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_size_16" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                    android:id="@+id/termsAndConditionTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_margin_5"
+                    android:gravity="center"
+                    android:paddingBottom="@dimen/text_margin_5"
+                    android:paddingTop="@dimen/text_margin_5"
+                    android:text="TERMS &amp; CONDITIONS"
+                    android:textAllCaps="true"
+                    android:textColor="@color/blue_color_doxdepo1"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/submitBtn"
+                android:layout_width="@dimen/_180sdp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/custom_btn_focus"
+                android:text="@string/str_submit_btn_text"
+                android:textAllCaps="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_below="@+id/finalamounthint"
+                android:textSize="@dimen/_15sdp"
+                android:textColor="@android:color/white"
+                android:textStyle="bold"
+                />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

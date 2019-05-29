@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/one"
+        android:title="View Tenant"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/two"
+        android:title="Get Record"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/three"
+        android:title="View Attendance"/>
+
+
+    <item
+        android:id="@+id/four"
+        android:title="Food Attendance"/>
+
+    <item
+        android:id="@+id/five"
+        android:title="Sync Attendance"
+        android:visible="true"/>
+
+    <item
+        android:id="@+id/six"
+        android:title="Delete Tenant"
+        android:visible="false"/>
+
+</menu>

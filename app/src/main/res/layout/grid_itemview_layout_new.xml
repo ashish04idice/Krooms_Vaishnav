@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_1sdp">
+    <!--android:background="@color/grid_color_orange"-->
+        <LinearLayout
+            android:id="@+id/layproperty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:id="@+id/txtname"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:maxLines="1"
+                android:maxLength="14"
+                android:paddingTop="@dimen/_1sdp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text=""
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+            <LinearLayout
+                android:weightSum="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="@dimen/_1sdp"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:maxLines="1"
+                    android:maxLength="14"
+                    android:id="@+id/txtdate"
+                    android:text=""
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_9sdp" />
+
+                <TextView
+                    android:layout_width="5dp"
+                    android:layout_height="1dp"
+                    android:background="@color/white"
+                    android:textSize="@dimen/_10sdp"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:maxLines="1"
+                    android:maxLength="14"
+                    android:text=""
+                    android:id="@+id/txttime"
+                    android:textStyle="bold"
+                    android:textColor="@color/grey"
+                    android:textSize="@dimen/_9sdp" />
+
+            </LinearLayout>
+            <!--  <ImageView
+                  android:layout_width="@dimen/_80sdp"
+                  android:layout_height="@dimen/_80sdp"
+                  android:id="@+id/tenat_pic"
+                  android:padding="@dimen/_3sdp"
+                  android:layout_gravity="center"
+                  android:src="@drawable/profile_pic"
+                  />-->
+
+
+            <!-- <com.androidhub4you.crop.RoundedImageView
+                 android:id="@+id/tenat_pic"
+                 android:layout_width="100dp"
+                 android:layout_height="100dp"
+                 android:layout_marginTop="15dp"
+                 android:src="@drawable/pic1" />
+     -->
+            <RelativeLayout
+                android:layout_width="@dimen/_80sdp"
+                android:layout_height="@dimen/_89sdp">
+
+                <FrameLayout
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_80sdp">
+
+                    <ImageView
+                        android:id="@+id/tenant_pic"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="3dp"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/att_icon" />
+
+                    <ImageView
+                        android:id="@+id/border"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+
+
+                </FrameLayout>
+                //old working
+
+
+                //
+
+                <TextView
+                    android:id="@+id/txtroomno"
+                    android:layout_width="@dimen/_35sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_10sdp"></TextView>
+
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/img_active"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:paddingTop="@dimen/_2sdp"
+                android:visibility="gone" />
+
+            <!-- <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/tenat_pic"
+                 android:layout_width="@dimen/_80sdp"
+                 android:layout_height="@dimen/_80sdp"
+                 android:layout_gravity="center"
+                 android:padding="@dimen/_3sdp"
+                 android:background="@drawable/pic1"
+                 app:border_color="@color/white"
+                 app:border_width="3dp" />
+
+     -->
+
+
+            <!-- <LinearLayout
+                 android:layout_width="@dimen/_120sdp"
+                 android:layout_height="@dimen/_120sdp"
+                 android:background="@drawable/plain_circle_red"
+                 android:id="@+id/layout_circle"
+                 android:layout_gravity="center"
+                 android:gravity="center"
+                 >
+
+                 <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                     android:id="@+id/tenat_pic"
+                     android:layout_width="@dimen/_80sdp"
+                     android:layout_height="@dimen/_80sdp"
+                     android:layout_centerHorizontal="true"
+                     android:padding="@dimen/_10sdp"
+                     android:background="@drawable/pic1"
+                     app:border_color="@color/white"
+                     app:border_width="3dp" />
+
+
+            &lt;!&ndash; <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                 android:id="@+id/tenat_pic"
+                 android:layout_width="120dp"
+                 android:layout_height="120dp"
+                 android:layout_centerHorizontal="true"
+                 android:background="@drawable/pic1"
+                 app:border_color="@color/white"
+                 app:border_width="3dp" />
+                 &ndash;&gt;
+
+                 </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Tenant_name"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txttime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:text="Time-101"
+                    android:textColor="@color/black"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+</LinearLayout>

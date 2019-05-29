@@ -1,0 +1,432 @@
+<resources>
+    <string name="app_name">Krooms</string>
+    <!--<string name="api_key_release">AIzaSyC0BdnIc5Wu8P1NymGnmUkXdN99wjg95P8</string>-->
+    <string name="api_key_release">AIzaSyARBFSN5HoHDtTMwC0xOLCM5o7dzhs0TlI</string>
+
+    <!--   .....................Screen Title.....................   -->
+    <string name="str_title_registration">USER REGISTRATION</string>
+    <string name="str_title_login">LOGIN</string>
+    <string name="str_title_forgotpassword">Forgot Password</string>
+    <string name="str_title_changepassword">Change Password</string>
+
+    <!--   .....................Commontext.....................   -->
+    <string name="str_enter_email_hint">E-mail Id</string>
+    <string name="str_enter_first_name_hint">First Name</string>
+    <string name="str_enter_last_name_hint">Last Name</string>
+    <string name="str_enter_your_name_hint">User Name</string>
+    <string name="str_enter_mobile_hint">Mobile Number</string>
+    <string name="str_enter_password_hint">Password</string>
+    <string name="str_enter_one_password_hint">Please Enter one time password</string>
+    <string name="str_enter_old_password_hint">Previous Password</string>
+    <string name="str_enter_new_password_hint">New Password</string>
+    <string name="str_enter_confirm_password_hint">Re-type Password</string>
+    <string name="str_submit_btn_text">Submit</string>
+    <string name="str_skip_btn_text">Skip >></string>
+    <string name="str_update_btn_text">Update</string>
+    <string name="str_add_more">ADD MORE</string>
+
+
+    <string name="str_continue_btn_text">Continue..</string>
+    <string name="str_title_signup">SIGNUP</string>
+    <string name="str_otp_title">We have sent you an SMS</string>
+    <string name="str_resend_code">Resend Code?</string>
+    <string name="str_verification_sms">Sit Back and Relax! while we verify \nyour Mobile Number</string>
+    <string name="hint_otp">(Enter the Otp below in case if we fail to detect the SMS automatically)</string>
+    <string name="str_exitapp_message">Do you want to exit this app.</string>
+    <string name="str_back_message">Do you want to back from this screen.</string>
+
+    <!--   .....................Alert Massage.....................   -->
+    <string name="str_please_enter_first_name_alert">Please enter first name.</string>
+    <string name="str_please_enter_last_name_alert">Please enter last name.</string>
+    <string name="str_please_enter_father_name_alert">Please enter your fathers name.</string>
+    <string name="str_please_enter_your_name_alert">Please enter user name</string>
+    <string name="str_please_enter_email_alert">Please enter email address.</string>
+    <string name="str_please_enter_valid_email">Please enter valid email address.</string>
+    <string name="str_please_enter_your_mobile_no_alert">Please enter mobile number.</string>
+    <string name="str_please_enter_your_pasword_alert">Please enter password.</string>
+    <string name="str_please_enter_your_old_pasword_alert">Please enter previous password.</string>
+    <string name="str_please_enter_your_new_pasword_alert">Please enter new password.</string>
+    <string name="str_please_enter_reenter_new_pasword_alert">Please enter re-type password.</string>
+    <string name="str_do_not_match">Password do not match.</string>
+    <string name="str_mobile_verify_sms">While we verify your mobile number</string>
+    <string name="str_please_enter_valid_mobile">Please enter valid mobile number.</string>
+
+
+    <string name="str_no_more_data">No more data found</string>
+    <string name="str_no_network">Internet is not available, Please check and try again.</string>
+    <string name="str_logout_message">Do you want to logout this app.</string>
+
+    <string name="str_valid_lat">Please enter valid Latitude.</string>
+    <string name="str_valid_long">Please enter valid Longitude.</string>
+
+    <!--   .....................Notification key and id.....................   -->
+    <string name="app_gcm_project_id">green-grass-118210</string>
+    <string name="app_gcm_project_no">985866812092</string>
+
+    <!--cc avenue app code-->
+    <string-array name="nav_drawer_items_geust">
+        <item>Home</item>
+        <item>Login</item>
+        <item>Add Property</item>
+        <item>Book Property</item>
+        <item>Support</item>
+        <item>About Us</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons1_geust">
+        <item>@drawable/home</item>
+        <item>@drawable/login</item>
+        <item>@drawable/add</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+    </array>
+
+
+    <string-array name="nav_drawer_items_hosteller">
+        <item>Home</item>
+        <item>Tenant Info</item>
+        <item>Booked Property</item>
+        <item>Make Payment</item>
+        <item>Complaint</item>
+        <item>Feedback</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="nav_drawer_icons1_hosteller">
+        <item>@drawable/home</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+        <item></item>
+    </array>
+
+    <string-array name="nav_drawer_items_parent">
+        <item>Home</item>
+        <item>Parent Profile</item>
+        <item>Booked Property</item>
+        <item>Make Payment</item>
+        <item>Add Child</item>
+        <item>View Child</item>
+        <item>Complaint</item>
+        <item>Feedback</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+    </string-array>
+
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons1_property_parent">
+        <item>@drawable/home</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/add</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+    </array>
+
+    <string-array name="nav_drawer_items_owner">
+        <item>Home</item>
+        <item>Owner Profile</item>
+        <item>Add Property</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+    </string-array>
+    <!-- Nav Drawer List Item Icons -->
+    <!-- Keep them in order as the titles are in -->
+    <array name="nav_drawer_icons1_property_owner">
+        <item>@drawable/home</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/add</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+    </array>
+
+    <!--<item>Electricity</item>
+    <item>@drawable/electricity</item>
+    -->
+    <string-array name="nav_drawer_items_owner1">
+        <item>Home</item>
+        <item>Owner Profile</item>
+        <item>View Property</item>
+        <item>Add Property</item>
+        <item>View Tenants</item>z
+        <item>Change Property</item>
+        <item>Payment</item>
+        <item>Payment Status</item>
+        <item>Add Employee</item>
+        <item>View Employee</item>
+        <item>Other Charges</item>
+        <item>Electricity</item>
+        <item>Inventory</item>
+        <item>Expenses</item>
+        <item>Manual Attendance</item>
+        <item>Attendance</item>
+        <item>Attendance Report</item>
+        <item>Get Attendance</item>
+        <item>Night Attendance Status</item>
+        <item>Complaint</item>
+        <item>Feedback</item>
+        <item>Terms and Condition</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+        <!-- <item>Live Video</item>-->
+    </string-array>
+
+
+    <array name="nav_drawer_icons1_property_owner1">
+        <item>@drawable/home</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/add</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/profile</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/electricity</item>
+        <item>@drawable/attendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+        <!--  <item>@drawable/video_live_icon</item>-->
+    </array>
+
+
+    <string-array name="nav_drawer_items_accountant">
+        <item>View Property</item>
+        <item>View Tenants</item>
+        <item>Payment</item>
+        <item>Payment Status</item>
+        <item>Other Charges</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="nav_drawer_icons_accountant">
+        <item>@drawable/view_info</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+    </array>
+
+    <string-array name="nav_drawer_items_warden">
+        <item>Home</item>
+        <item>View Property</item>
+        <item>View Tenants</item>
+        <item>Payment</item>
+        <item>Other Charges</item>
+        <item>Electricity</item>
+        <item>Inventory</item>
+        <item>Manual Attendance</item>
+        <item>Attendance</item>
+        <item>Attendance Report</item>
+        <item>Get Attendance</item>
+        <item>Night Attendance Status</item>
+        <!-- <item>Live Video</item>-->
+        <item>Complaint</item>
+        <item>Feedback</item>
+        <item>Support</item>
+        <item>About Us</item>
+        <item>Logout</item>
+    </string-array>
+
+    <array name="nav_drawer_icons1_property_warden">
+        <item>@drawable/home</item>
+        <item>@drawable/view_info</item>
+        <item>@drawable/view_list</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/monthlypaymenticon</item>
+        <item>@drawable/electricity</item>
+        <item>@drawable/attendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <item>@drawable/getattendenceicon</item>
+        <!--<item>@drawable/video_live_icon</item>-->
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/ic_feedback</item>
+        <item>@drawable/supporticon</item>
+        <item>@drawable/ic_about</item>
+        <item>@drawable/logout</item>
+    </array>
+
+
+    <string name="str_owner_detail_title">OWNER DETAIL</string>
+    <string name="str_parent_detail_title">PARENT DETAIL</string>
+    <string name="str_owner_first_name">Full Name</string>
+    <string name="str_owner_father_name">Father Name</string>
+    <string name="str_owner_last_name">Last Name</string>
+    <string name="str_owner_address">Owner Address</string>
+    <string name="str_parent_address">Parent Address</string>
+    <string name="str_owner_landmark">Landmark</string>
+    <string name="str_parent_landmark">Landmark</string>
+    <string name="str_select_state">State</string>
+    <string name="str_select_city">City</string>
+    <string name="str_select_area">Area</string>
+    <string name="str_pin_code">Pin Code</string>
+    <string name="str_profession_selection_title">Profession</string>
+    <string name="str_owner_organization">Organization</string>
+    <string name="str_owner_email">Email ID</string>
+    <string name="str_owner_landline_hint">LandLine</string>
+    <string name="str_owner_mobile_hint">Mobile</string>
+    <string name="str_next_btn_text">Next</string>
+
+
+    <string name="str_no_of_rooms_title">No Of Rooms</string>
+    <string name="str_for_whom_title">For Whom</string>
+    <string name="str_property_face_title">Property Face</string>
+
+    <string name="str_distace_title">Distance</string>
+    <string name="str_owner_prequisite_condition_title">Owner Perquisite Conditions</string>
+    <string name="str_money_policies_title">Money Policies</string>
+
+    <string name="str_railwaystation_title">Railway Station</string>
+    <string name="str_busstand_title">Bus Stand</string>
+    <string name="str_Airport_title">Airport</string>
+    <string name="str_nearestsquare_title">Nearest Square</string>
+    <string name="str_nearestsquare_distance_title">Distance</string>
+    <string name="str_tenanttype_title">Tenant Type</string>
+    <string name="str_curfewtime_title">Curfew Time</string>
+    <string name="str_noofvehicles_title">Vehicles</string>
+    <string name="str_smoking_title">Smoking</string>
+    <string name="str_drinking_title">Drinking</string>
+    <string name="str_noofpeople">No Of People</string>
+    <string name="str_rentamount_title">Rent Amount</string>
+    <string name="str_advance_title">Advance Amount</string>
+    <string name="str_maintenance">Maintenance</string>
+    <string name="str_waterbill">Water Bill</string>
+    <string name="str_otherexpenses">Other Expenses</string>
+    <string name="str_electricity">Electricity</string>
+
+    <string name="terms_and_condition_title">Terms and Conditions</string>
+    <string name="terms_and_condition_msg">Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem
+        ipsum Lorem ipsum Lorem ipsum Lorem ipsum ipsum Lorem ipsum ipsum Lorem ipsum ipsum Lorem
+        ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum
+        Lorem ipsum ipsum Lorem ipsum ipsum Lorem ipsum ipsum Lorem ipsum</string>
+
+    <string name="str_total_area">Total Area :</string>
+    <string name="str_super_builtup_area">Super Builtup Area :</string>
+    <string name="str_property_face">Property Face :</string>
+    <string name="str_kitchen">Kitchen :</string>
+    <string name="str_kitchen_type">Kitchen Type :</string>
+    <string name="str_furnish">Furnish :</string>
+    <string name="str_water_supply">Water Supply :</string>
+    <string name="str_power_backup">Power Backup :</string>
+    <string name="str_railway_station">Railway Station :</string>
+    <string name="str_bus_stand">Bus Stand :</string>
+    <string name="str_airport">Airport :</string>
+    <string name="str_nearest_sq.">Nearest Sq. :</string>
+    <string name="str_nearest_sq_distance">Nearest Sq. Distance :</string>
+    <string name="str_tenant_type">Tenant Type :</string>
+    <string name="str_curfew_time">Curfew Time :</string>
+    <string name="str_no_of_vehicle">No Of Vehicle :</string>
+    <string name="str_smoking">Smoking :</string>
+    <string name="str_drinking">Drinking :</string>
+    <string name="str_no_of_people">No Of People :</string>
+
+    <string name="str_rent_amount">Rent Amount :</string>
+    <string name="str_advance_amount">Advance Amount :</string>
+    <string name="str_maintenance_title">Maintenance :</string>
+    <string name="str_water_bill">Water Bill :</string>
+    <string name="str_other_expensess">Other Expenses :</string>
+    <string name="str_elecricity_bill">Electricity Bill :</string>
+    <string name="title_activity_download_rcu_from">DownloadRcuFrom</string>
+
+
+    <string name="str_tenant_father_name_title">Father Name</string>
+    <string name="str_tenant_father_contact_title">Father Contact No.</string>
+    <string name="str_tenant_address_title">Address</string>
+    <string name="str_tenant_contact_title">Contact No</string>
+    <string name="str_tenant_email_title">Email Id</string>
+    <string name="str_tenant_property_hireing_date_title">Hire Date</string>
+    <string name="str_tenant_property_leaving_date_title">Leave Date</string>
+    <string name="str_tenant_institude_address_title">Address</string>
+    <string name="str_tenant_institude_contact_title">Contact No</string>
+    <string name="str_tenant_worddetail_title">Work Detail</string>
+    <string name="str_tenant_guarantor_name_title">Guarantor Name</string>
+    <string name="str_tenant_guarantor_address_title">Guarantor Address</string>
+    <string name="str_tenant_guarantor_contact_title">Guarantor Contact No.</string>
+    <string name="str_tenant_payment_mode_title">Payment Mode</string>
+    <string name="str_tenant_payment_order_id">Order Id</string>
+    <string name="str_tenant_payment_transaction">Transaction Id</string>
+    <string name="str_tenant_total_amout">Advance Amount</string>
+    <string name="str_tenant_remaining_amout">Remaining Amount</string>
+
+    <string name="str_tenant_personal_information_title">PERSONAL INFORMATION</string>
+    <string name="str_tenant_professional_information_title">PROFESSIONAL INFORMATION</string>
+    <string name="str_tenant_payment_detail">PAYMENT DETAIL</string>
+    <string name="str_tenant_guarantor_information_title">GUARANTOR INFORMATION</string>
+    <string name="str_tenant_other_information_title">OTHER INFORMATION</string>
+
+    <string name="str_ask_payment_confirmation_hint">Please enter payment done by tenant</string>
+
+
+    <string name="access_code">Access Code</string>
+    <string name="pay_opt">Payment Option</string>
+    <string name="card_type">Card Type</string>
+    <string name="pay_button">Pay</string>
+    <string name="next_button">Next</string>
+    <string name="name">Name</string>
+    <string name="address">Address</string>
+    <string name="country">Country</string>
+    <string name="billingAddress">Billing Address</string>
+    <string name="deliveryAddress">Delivery Address</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+    <string name="zip">Zip</string>
+    <string name="tel">Telephone</string>
+    <string name="email">Email Id</string>
+    <string name="merchant_id">Merchant Id</string>
+    <string name="currency">Currency</string>
+    <string name="amount">Amount</string>
+    <string name="redirect_url">Redirect Url</string>
+    <string name="cancel_url">Cancel Url</string>
+    <string name="card_number">Card Number</string>
+    <string name="card_cvv">Card CVV</string>
+    <string name="expiry_month">Expiry Month</string>
+    <string name="expiry_year">Expiry Year</string>
+    <string name="card_details">Card Details</string>
+    <string name="issuing_bank">Issuing Bank</string>
+    <string name="rsa_url">RSA Key Url</string>
+    <string name="customer_identifier">Customer Identifier</string>
+    <string name="emi_banks">EMI Banks</string>
+    <string name="emi_card_name">Card Name</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps2">Map</string>
+</resources>

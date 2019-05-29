@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black_90">
+
+    <RelativeLayout
+        android:id="@+id/createCustomCategoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_pading_15"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/createCutomCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/orange_color">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/alertTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/text_margin_10"
+
+                android:text="Payment confirmation"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createCutomCategoryTitle"
+            android:layout_marginTop="@dimen/text_margin_5"
+            >
+
+            <RelativeLayout
+                android:id="@+id/relativelayout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/appLogo"
+                android:layout_marginTop="@dimen/text_margin_30"
+                android:padding="@dimen/text_pading_4">
+
+                <ImageView
+                    android:id="@+id/imageview_mobile"
+                    android:layout_width="@dimen/text_margin_25"
+                    android:layout_height="@dimen/text_margin_25"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/text_pading_2"
+                    android:src="@drawable/payment_next" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                    android:id="@+id/payment_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/text_margin_10"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_toRightOf="@+id/imageview_mobile"
+                    android:layout_centerVertical="true"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:hint="@string/str_ask_payment_confirmation_hint"
+                    android:background="@color/transparent"
+                    android:textColor="@color/black"
+
+                    />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/payment_input"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:background="@color/black" />
+
+            </RelativeLayout>
+
+
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/bedRelatedMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativelayout_mobile"
+                android:layout_margin="@dimen/text_margin_10"
+                android:text="Do you want to confirm the payment from tenant?"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_size_18"
+                android:layout_marginLeft="@dimen/text_margin_20"
+                android:layout_centerHorizontal="true"
+                />
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bedRelatedMsg"
+                android:layout_centerHorizontal="true"
+                >
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/btn1"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_small_height"
+                    android:layout_toLeftOf="@+id/invisibleView"
+                    android:background="@drawable/common_btn_bg"
+                    android:text="Yes"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/text_margin_10"
+                    android:layout_centerVertical="true"
+                    />
+                <View
+                    android:id="@+id/invisibleView"
+                    android:layout_width="@dimen/text_margin_5"
+                    android:layout_height="@dimen/text_margin_5"
+                    android:layout_centerInParent="true"
+                    android:visibility="invisible"
+                    />
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/btn2"
+                    android:layout_width="@dimen/button_width"
+                    android:layout_height="@dimen/button_small_height"
+                    android:layout_toRightOf="@+id/invisibleView"
+                    android:background="@drawable/common_btn_bg"
+                    android:text="No"
+                    android:textColor="@color/white"
+                    android:layout_marginBottom="@dimen/text_margin_10"
+                    android:layout_centerVertical="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

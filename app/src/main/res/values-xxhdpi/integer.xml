@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <!-- 1080x1920  -->
+     <integer name="dynamic_edittext_height">55</integer>
+      <integer name="dynamic_edittext_left_margin">45</integer>
+      <integer name="image_oval">300</integer>
+</resources>

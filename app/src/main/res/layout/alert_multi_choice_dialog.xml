@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/transparent_black_75">
+
+    <RelativeLayout
+        android:id="@+id/createCustomCategoty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="@dimen/text_pading_15"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/createCutomCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:background="@color/orange_color">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/alertTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Create custom category"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/listView_Category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createCutomCategoryTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/alertBtnLayout"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.6dp"
+            android:background="@color/black"
+            android:layout_below="@+id/alertBtnLayout" />
+
+
+        <RelativeLayout
+            android:id="@+id/alertBtnLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:padding="@dimen/text_pading_5"
+            android:layout_centerHorizontal="true">
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/alertCancelBtn"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_small_height"
+                android:layout_toLeftOf="@+id/adjusterView"
+                android:background="@drawable/custom_btn"
+                android:text="Cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+
+            <View
+                android:id="@+id/adjusterView"
+                android:layout_width="@dimen/text_margin_10"
+                android:layout_height="@dimen/text_margin_10"
+                android:layout_centerInParent="true"
+                android:background="@color/transparent" />
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/alertAddBtn"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_small_height"
+                android:layout_toRightOf="@+id/adjusterView"
+                android:background="@drawable/custom_btn"
+                android:text=" Add "
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="@dimen/text_margin_10"
+            android:layout_below="@+id/alertBtnLayout" />
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "608709186203",
+    "firebase_url": "https://krooms-33d8e.firebaseio.com",
+    "project_id": "krooms-33d8e",
+    "storage_bucket": "krooms-33d8e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:608709186203:android:772696554fe38726",
+        "android_client_info": {
+          "package_name": "com.krooms.hostel.rental.property.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "608709186203-hhuq5dah7eaumutic65jbijq9di1q82t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.krooms.hostel.rental.property.app",
+            "certificate_hash": "2f4abb4484e4b7d529d3fff45f525ae8bdf333ac"
+          }
+        },
+        {
+          "client_id": "608709186203-bm51f48lpeh3frc3hcs64ad0nshrkk1a.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRroYa30yloo_Rfn-X9ijXk70plrZn3x0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "608709186203-bm51f48lpeh3frc3hcs64ad0nshrkk1a.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

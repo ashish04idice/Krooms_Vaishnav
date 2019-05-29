@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange_color">
+
+        <ImageButton
+            android:id="@+id/main_header_menu"
+            android:layout_width="@dimen/text_margin_25"
+            android:layout_height="@dimen/text_margin_25"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_margin_5"
+            android:background="@drawable/menu_icon"
+            android:padding="@dimen/text_pading_10" />
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/searchlayout"
+            android:layout_margin="@dimen/text_margin_10"
+            android:layout_toRightOf="@+id/main_header_menu"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layareaserch"
+            android:weightSum="1"
+            android:visibility="visible"
+            android:orientation="horizontal">
+
+           <!-- android:layout_margin="@dimen/text_margin_10"
+            android:layout_toRightOf="@+id/main_header_menu"-->
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_margin_40"
+                android:layout_weight="0.4">
+
+                <Spinner
+                    android:id="@+id/cityInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_35"
+                    android:layout_centerVertical="true"
+                    android:background="@color/transparent"
+                    android:fadeScrollbars="true"
+                    android:hint="City"
+                    android:paddingLeft="@dimen/text_pading_2"
+                    android:paddingRight="@dimen/text_pading_2"
+                    android:scrollbarFadeDuration="500" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/cityInput"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="@dimen/text_margin_5"
+                android:layout_height="@dimen/input_text_field_height" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="@dimen/text_margin_40"
+                android:layout_weight="0.4">
+
+                <Spinner
+                    android:id="@+id/areaInput"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_35"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="1"
+                    android:background="@color/transparent"
+                    android:fadeScrollbars="true"
+                    android:hint="Area"
+                    android:paddingLeft="@dimen/text_pading_2"
+                    android:paddingRight="@dimen/text_pading_2"
+                    android:scrollbarFadeDuration="500"
+                    android:visibility="gone" />
+
+                <com.krooms.hostel.rental.property.app.custom.CustomAutoCompleteTextView
+                    android:id="@+id/myautocomplete"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_35"
+                    android:paddingLeft="@dimen/text_pading_2"
+                    android:paddingRight="@dimen/text_pading_2"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:layout_centerVertical="true"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/black"
+                    android:textColorHint="@color/black"
+                    android:textSize="@dimen/text_size_15"
+                    android:textStyle="normal"
+                    android:hint="Area"
+                    android:imeActionId="666"
+                    android:dropDownWidth="@dimen/offer_image_height"
+                    android:completionThreshold="1" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:visibility="visible"
+                    android:layout_below="@+id/myautocomplete"
+                    android:background="@color/white" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+
+                <ImageButton
+                    android:id="@+id/searchBtn"
+                    android:layout_width="@dimen/text_margin_25"
+                    android:layout_height="@dimen/text_margin_25"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/text_margin_10"
+                    android:layout_marginTop="@dimen/text_margin_10"
+                    android:visibility="visible"
+                    android:background="@drawable/search" />
+
+
+                </RelativeLayout>
+        </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/searchlayoutnotification"
+            android:layout_marginLeft="@dimen/text_margin_8"
+            android:layout_marginTop="@dimen/text_margin_8"
+            android:layout_marginBottom="@dimen/text_margin_8"
+            android:layout_toRightOf="@+id/main_header_menu"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:visibility="visible"
+                android:orientation="horizontal">
+
+                <!-- android:layout_margin="@dimen/text_margin_10"
+                 android:layout_toRightOf="@+id/main_header_menu"-->
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/text_margin_40"
+                    android:layout_weight="0.4">
+
+                    <Spinner
+                        android:id="@+id/cityInput1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_margin_35"
+                        android:layout_centerVertical="true"
+                        android:background="@color/transparent"
+                        android:fadeScrollbars="true"
+                        android:hint="City"
+                        android:visibility="gone"
+                        android:paddingLeft="@dimen/text_pading_2"
+                        android:paddingRight="@dimen/text_pading_2"
+                        android:scrollbarFadeDuration="500" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/cityInput1"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="@dimen/text_margin_5"
+                    android:layout_height="@dimen/input_text_field_height" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/text_margin_40"
+                    android:layout_weight="0.4">
+
+                    <Spinner
+                        android:id="@+id/areaInput1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_margin_35"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:visibility="gone"
+                        android:background="@color/transparent"
+                        android:fadeScrollbars="true"
+                        android:hint="Area"
+                        android:paddingLeft="@dimen/text_pading_2"
+                        android:paddingRight="@dimen/text_pading_2"
+                        android:scrollbarFadeDuration="500"
+                         />
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomAutoCompleteTextView
+                        android:id="@+id/myautocomplete1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/text_margin_35"
+                        android:paddingLeft="@dimen/text_pading_2"
+                        android:paddingRight="@dimen/text_pading_2"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:visibility="gone"
+                        android:layout_centerVertical="true"
+                        android:background="@android:color/transparent"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:textSize="@dimen/text_size_15"
+                        android:textStyle="normal"
+                        android:hint="Area"
+                        android:imeActionId="666"
+                        android:dropDownWidth="@dimen/offer_image_height"
+                        android:completionThreshold="1" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:visibility="gone"
+                        android:layout_below="@+id/myautocomplete1"
+                        android:background="@color/white" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.2">
+
+                    <ImageButton
+                        android:id="@+id/searchBtn1"
+                        android:layout_width="@dimen/text_margin_25"
+                        android:layout_height="@dimen/text_margin_25"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/text_margin_10"
+                        android:layout_marginTop="@dimen/text_margin_10"
+                        android:visibility="gone"
+                        android:background="@drawable/search" />
+
+
+
+                  <!--  android:layout_width="@dimen/text_margin_25"
+                    android:layout_height="@dimen/text_margin_25"-->
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:id="@+id/relativenotification"
+                        android:visibility="visible"
+                        >
+
+                        <TextView
+                            android:layout_width="@dimen/_11sdp"
+                            android:layout_height="@dimen/_11sdp"
+                            android:text=""
+                            android:textSize="@dimen/_8sdp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:id="@+id/txtnotification_count"
+                            android:background="@drawable/gray_circle"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:layout_marginBottom="@dimen/_8sdp"
+                            />
+
+                       <!-- @dimen/text_margin_30-->
+                        <ImageButton
+                            android:id="@+id/notificationbtn"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginTop="@dimen/text_margin_10"
+                            android:layout_marginRight="@dimen/_8sdp"
+                            android:background="@drawable/ic_stat_notification" />
+
+
+
+                    </RelativeLayout>
+
+
+                    //
+
+                </RelativeLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchArea">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/fragmentContainerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/bottomLayout_panal"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/text_margin_10"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent" />
+
+            <LinearLayout
+                android:id="@+id/bottomLayout_panal"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/text_margin_50"
+                android:layout_alignParentBottom="true"
+                android:background="@color/black_with_opacity"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/filterBtnTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/filterIcon"
+                            android:layout_width="@dimen/text_margin_20"
+                            android:layout_height="@dimen/text_margin_20"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/filterText"
+                            android:background="@drawable/filter" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/filterText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:text="Filter"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_16" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/sortBtnTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/sortIcon"
+                            android:layout_width="@dimen/text_margin_20"
+                            android:layout_height="@dimen/text_margin_20"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/sort"
+
+                            />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/sortText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:layout_toRightOf="@+id/sortIcon"
+                            android:text="Sort"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_16" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/mapBtnTab"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/mapIcon"
+                            android:layout_width="@dimen/text_margin_20"
+                            android:layout_height="@dimen/text_margin_20"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/mapText"
+                            android:background="@drawable/map" />
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                            android:id="@+id/mapText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_margin="@dimen/text_margin_5"
+                            android:text="Map"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_size_16" />
+                    </RelativeLayout>
+                </RelativeLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="1dp" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

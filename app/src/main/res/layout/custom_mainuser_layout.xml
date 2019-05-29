@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/searchArea"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/header_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/orange_color">
+
+        <ImageButton
+            android:id="@+id/main_header_menu"
+            android:layout_width="@dimen/text_margin_25"
+            android:layout_height="@dimen/text_margin_25"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/text_margin_5"
+            android:background="@drawable/menu_icon"
+            android:padding="@dimen/text_pading_10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="@dimen/text_margin_10"
+            android:layout_toRightOf="@+id/main_header_menu"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="match_parent"
+               android:text="Home"
+               android:textSize="@dimen/_18sdp"
+               android:textColor="#ffffff"
+               />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/searchArea">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+           <!-- <FrameLayout
+                android:id="@+id/fragmentContainerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="@dimen/text_margin_10"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:clipToPadding="false"
+                android:divider="@android:color/transparent" />
+          -->
+
+
+          <!--  <include layout="@layout/grid_accountantlayout"/>
+-->
+            <GridView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/homegrid"
+                android:numColumns="2"
+                />
+
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/list_slidermenu"
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/white"
+            android:choiceMode="singleChoice"
+            android:dividerHeight="1dp" />
+    </android.support.v4.widget.DrawerLayout>
+
+
+</RelativeLayout>

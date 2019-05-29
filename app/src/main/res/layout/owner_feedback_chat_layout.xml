@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/back_button_left_fbackowner"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center|left"
+                android:text="Conversation"
+                android:id="@+id/for_tenant"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textAllCaps="true"
+                android:textColor="@drawable/white_text_selector"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_20sdp"
+                android:gravity="center|left"
+                android:text="feedback"
+                android:textAllCaps="true"
+                android:textColor="@drawable/white_text_selector"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+    <ListView
+        android:id="@+id/listfbackowner"
+        android:layout_above="@+id/sendfbackowner"
+        android:divider="#FFFFFF"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#d3d3d3"
+        android:id="@+id/sendfbackowner"
+        android:layout_alignParentBottom="true"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="@dimen/_250sdp"
+            android:layout_height="wrap_content"
+            android:hint="Reply"
+            android:id="@+id/descriptionfbackowner"
+            android:layout_marginLeft="10dp"
+            android:textColor="#000000"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:background="@color/orange_color"
+            android:text="Send"
+            android:id="@+id/sendreplyfbackowner"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:layout_height="match_parent" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

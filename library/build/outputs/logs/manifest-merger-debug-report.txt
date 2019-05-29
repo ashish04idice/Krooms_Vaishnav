@@ -1,0 +1,9 @@
+-- Merging decision tree log ---
+manifest
+ADDED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml:1:1-3:12
+INJECTED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml:1:1-3:12
+INJECTED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml:1:1-3:12
+	package
+		ADDED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml:1:11-46
+		INJECTED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml
+		INJECTED from D:\Krooms_Vaishnav_report\Krooms\library\AndroidManifest.xml

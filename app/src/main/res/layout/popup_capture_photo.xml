@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black_90"
+    android:gravity="center_horizontal"
+    android:padding="@dimen/text_pading_20" >
+
+    <RelativeLayout
+        android:id="@+id/Top_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+         >
+        <RelativeLayout
+            android:id="@+id/relative_take_photo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/orange_color"
+            >
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/textview_take_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/text_margin_10"
+            android:layout_centerInParent="true"
+            android:text="Select a photo source"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="normal" />
+        </RelativeLayout>
+        <View
+            android:id="@+id/view_line_camera"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/relative_take_photo"
+            android:layout_marginTop="@dimen/text_margin_10"
+            />
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/button_takephoto_camera"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/view_line_camera"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/text_margin_5"
+            android:background="@android:color/transparent"
+            android:text="Take a Photo"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_line_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/button_takephoto_camera"
+            android:layout_marginTop="@dimen/text_margin_5"
+            android:background="@color/black_with_opacity_new" />
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/button_takephoto_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/view_line_gallery"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/text_margin_5"
+            android:background="@android:color/transparent"
+            android:text="Pick from Library"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_18"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/view_line_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/button_takephoto_gallery"
+            android:layout_marginTop="@dimen/text_margin_5"
+            android:background="@color/black_with_opacity_new" />
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/button_takephoto_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/view_line_cancel"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/text_margin_5"
+            android:background="@android:color/transparent"
+            android:text="Cancel"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_size_20"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:background="@color/orange_color">
+
+        <TextView
+            android:id="@+id/popup_heading"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerInParent="true"
+            android:text="Select Video"/>
+        <RelativeLayout
+            android:id="@+id/image_cross_layout"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_height="@dimen/_22sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:background="@drawable/cross"
+                android:layout_centerVertical="true"
+
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/googlevideo"
+            android:layout_marginTop="@dimen/_5sdp">
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/global_positioning"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:id="@+id/googleview"
+                android:textSize="@dimen/_12sdp"
+                android:layout_marginLeft="@dimen/_100sdp"
+                android:text="Google 360 View"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+        <View
+            android:layout_height="@dimen/_1sdp"
+            android:layout_width="match_parent"
+            android:background="@color/orange_color"
+            android:id="@+id/view"
+            android:layout_below="@+id/googlevideo"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:id="@+id/youtubevideo"
+            android:layout_below="@+id/view"
+            android:layout_marginTop="@dimen/_5sdp">
+            <ImageView
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:src="@drawable/youtube"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColor="@color/black"
+                android:id="@+id/youtubeview"
+                android:layout_marginLeft="@dimen/_100sdp"
+                android:text="Youtube Video"
+                android:textSize="@dimen/_12sdp"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+
+

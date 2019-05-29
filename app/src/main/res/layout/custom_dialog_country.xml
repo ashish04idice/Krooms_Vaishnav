@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_250sdp"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:id="@+id/statepopup_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:background="@color/orange_color">
+
+        <TextView
+            android:id="@+id/statepopup_heading"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"
+            android:layout_centerInParent="true"
+            android:text=""/>
+
+        <RelativeLayout
+            android:id="@+id/country_cross_layout"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_width="@dimen/_35sdp"
+            android:visibility="visible"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_height="@dimen/_22sdp"
+                android:layout_width="@dimen/_23sdp"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:background="@drawable/cross"
+                android:layout_centerVertical="true"
+
+                />
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_height="wrap_content"
+        android:layout_below="@id/statepopup_header"
+        android:layout_width="match_parent">
+        <ListView
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:id="@+id/list_country"
+            android:dividerHeight="@dimen/_1sdp"
+            android:divider="@color/green_color"
+           >
+        </ListView>
+
+        <ImageView
+            android:id="@+id/student_loader"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_width="@dimen/_30sdp"
+            android:background="@drawable/red_loader"
+            android:visibility="gone"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

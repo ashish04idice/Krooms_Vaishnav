@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/transparent_black_90"
+    >
+
+    <RelativeLayout
+        android:id="@+id/createCustomCategoty"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/text_pading_15"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/createCutomCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/header_height"
+            android:background="@color/orange_color">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/alertTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/text_margin_10"
+                android:text="Search Property"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/selectSortOption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/createCutomCategoryTitle"
+            android:layout_margin="@dimen/text_margin_5"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                >
+
+            <Spinner
+                android:id="@+id/spinner_city"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:hint="Property type"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:background="@color/white"/>
+
+            <View
+                android:id="@+id/view_city_type"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/spinner_city"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:background="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+            <Spinner
+                android:id="@+id/spinner_area"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/input_text_field_height"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:hint="Property type"
+                android:overlapAnchor="false"
+                android:spinnerMode="dropdown"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textColorHint="@color/black" />
+
+            <View
+                android:id="@+id/view_area_type"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/spinner_area"
+                android:layout_marginLeft="@dimen/text_margin_10"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:background="@color/black" />
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/goBtn"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="@dimen/button_small_height"
+            android:layout_below="@+id/selectSortOption"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/text_margin_5"
+            android:background="@drawable/common_btn_bg"
+            android:text="Go"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

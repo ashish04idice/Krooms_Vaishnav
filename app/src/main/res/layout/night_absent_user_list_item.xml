@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp"
+        app:cardBackgroundColor="#FFFFFF"
+        >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="@dimen/_50sdp"
+            android:gravity="center"
+            android:layout_height="@dimen/_50sdp">
+
+            <TextView
+                android:layout_width="@dimen/_35sdp"
+                android:background="@drawable/gray_cirlce_large_img"
+                android:id="@+id/txtnum"
+                android:textColor="#ffffff"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="@dimen/_12sdp"
+                android:gravity="center"
+                android:layout_height="@dimen/_35sdp" />
+
+        </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/layout_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginBottom="@dimen/text_margin_2"
+        android:layout_toRightOf="@+id/imageview_itm_user"
+        android:layout_marginLeft="@dimen/_6sdp"
+        android:orientation="vertical">
+
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:id="@+id/property_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name- Rahul mahajan"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:orientation="horizontal">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/property_user_book_room"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Room no:- 202"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_14sdp" />
+
+             </LinearLayout>
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

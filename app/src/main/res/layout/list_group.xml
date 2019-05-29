@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_gravity="center"
+    android:padding="@dimen/text_pading_5">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/createCutomCategoryTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/top_panal_color">
+
+            <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                android:id="@+id/dailogTitiel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_margin="@dimen/text_margin_5"
+                android:text="Text"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18" />
+
+        </RelativeLayout>
+
+        <com.krooms.hostel.rental.property.app.custom.TouchImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_280sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_below="@+id/createCutomCategoryTitle"
+             />
+
+        <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+            android:id="@+id/downloadImageBtn"
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@+id/imageView"
+            android:background="@drawable/common_btn_bg"
+            android:text="Download"
+            android:textColor="#ffffff"
+            android:textSize="@dimen/text_size_16" />
+
+        <!--android:layout_alignParentBottom="true"-->
+
+    </RelativeLayout>
+</RelativeLayout>

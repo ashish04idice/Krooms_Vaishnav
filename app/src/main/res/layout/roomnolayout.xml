@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout_roomInfo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.krooms.hostel.rental.property.app.activity.PropertyInfoThirdRoomActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/header"
+        android:background="@color/orange_color"
+        android:layout_height="@dimen/_52sdp">
+        <RelativeLayout
+            android:layout_width="@dimen/_45sdp"
+            android:layout_marginLeft="@dimen/_3sdp"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/topPanelBar"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="@dimen/_21sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_back_arrow"
+                />
+        </RelativeLayout>
+        <com.krooms.hostel.rental.property.app.custom.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_50sdp"
+            android:drawablePadding="@dimen/text_pading_4"
+            android:gravity="left|center_vertical"
+            android:text="ADD ROOMS"
+            android:textAllCaps="true"
+            android:textColor="@drawable/white_text_selector"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout_rooms_top"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_alignParentRight="true"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                android:id="@+id/button_add_more"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginRight="@dimen/text_margin_10"
+                android:layout_marginTop="@dimen/text_margin_10"
+                android:background="@drawable/input_text_background_rooms"
+                android:text="@string/str_add_more"
+                android:layout_gravity="right"
+                android:textColor="@drawable/white_text_selector"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="normal"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/scroll_layout"
+            android:layout_below="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusableInTouchMode="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/mainlayout"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:id="@+id/no_of_rooms_selection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_50"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_pading_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.1"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_no_of_rooms_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16"
+                        android:textStyle="normal" />
+
+                    <RelativeLayout
+                        android:id="@+id/no_of_rooms_selection_rLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+                        <com.krooms.hostel.rental.property.app.custom.CustomEditText
+                            android:id="@+id/no_of_rooms_selection_edit"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="@dimen/text_margin_10"
+                            android:layout_marginTop="@dimen/text_margin_2"
+                            android:background="@drawable/ic_black_line"
+                            android:hint="Enter No of rooms"
+                            android:inputType="text"
+                            android:singleLine="true"
+                            android:minHeight="@dimen/edittext_height"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_size_16" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:visibility="gone"
+                            android:layout_below="@+id/no_of_rooms_selection"
+                            android:layout_marginLeft="@dimen/text_margin_10"
+                            android:background="@color/black" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/for_whom_selection_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/text_margin_50"
+                    android:layout_below="@+id/no_of_rooms_selection_layout"
+                    android:layout_marginLeft="@dimen/text_margin_10"
+                    android:layout_marginRight="@dimen/text_pading_10"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.krooms.hostel.rental.property.app.custom.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1.1"
+                        android:gravity="center_vertical"
+                        android:text="@string/str_for_whom_title"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <RelativeLayout
+                        android:id="@+id/for_whom_selection_rlayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.9">
+
+                        <Spinner
+                            android:id="@+id/for_whom_selection"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/edittext_height"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center_vertical" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_below="@+id/for_whom_selection"
+                            android:layout_marginLeft="@dimen/text_margin_10"
+                            android:background="@color/black" />
+
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+                <com.krooms.hostel.rental.property.app.custom.ButtonPlus
+                    android:id="@+id/createrooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/button_height"
+                    android:layout_below="@+id/linearLayout_rooms_top"
+                    android:layout_marginBottom="@dimen/text_margin_10"
+                    android:layout_marginLeft="@dimen/text_margin_20"
+                    android:layout_marginRight="@dimen/text_margin_20"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:background="@drawable/custom_btn_focus"
+                    android:text="Create Rooms"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <GridView
+                android:id="@+id/gridview"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@+id/mainlayout"
+                android:numColumns="3"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                android:verticalSpacing="@dimen/_10sdp"
+                android:horizontalSpacing="@dimen/_10sdp"
+                android:stretchMode="columnWidth"
+                android:gravity="center"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:text="Upload Room Image"
+                android:layout_alignParentBottom="true"
+                android:id="@+id/btn_roomimg"
+                android:visibility="gone"
+                android:textAllCaps="false"
+                android:background="@drawable/custom_btn_focus"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                />
+
+        </RelativeLayout>
+</RelativeLayout>
